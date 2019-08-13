@@ -1,423 +1,211 @@
-/* ------------------------------------*\
-RESET
-\*------------------------------------*/
-
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+/* BACKGROUND */
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/AvenirLTStd-Book.otf);
 }
 
-/* HTML5 display-role reset for older browsers */
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+.stage {
+  height: 1918px;
+  width: 100%;
 }
 
-/*------------------------------------*\
-my CSS
-\*------------------------------------*/
-
-* {
-  box-sizing: border-box;
-}
-html {
-  font-size: 62.5%;
-}
-html,
-body {
-  font-family: 'Roboto', Arial, sans-serif;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.landing {
-  margin: 0 auto;
-  max-width: 1440px;
-  overflow: auto;
-  /* Weird quirk: When you remove the border from the div the layout changes. You can prevent margins from collapsing by either adding a border or some padding to the top of your block element, or by creating a new block formatting context by setting overflow: auto */
-}
-
-.landingBackground {
+.stage-left {
+  min-height: 44%;
+  width: 71.8%;
   position: absolute;
-  z-index: -10;
-}
-
-.intro {
+  z-index: 1;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: #ffffff;
+}
+
+.stage-left .stage-title {
+  /* width: 490px; */
+  /* margin: 160px 19% 40px 0; */
+  width: 570px;
+  margin: 160px 6% 40px 0;
+  /* padding-right: 50px; */
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: flex-start;
-  /* Weird quirk: if you don't define a width on an image and it's in a flex-container, it will stretch to 100%. align-self: [flex-start, center...others] will prevent the image from taking 100% of the flex-containers width.  */
-  margin: 150px 0 0 200px;
+  color: #2e2f38;
+  font-family: Avenir;
+  font-size: 2.1rem;
+  text-align: justify;
 }
 
-.intro img {
-  padding: 0 0 25px 0;
+.stage-left .stage-title h1 {
+  margin: 18px 0;
+  font-size: 6.6rem;
+  font-weight: bold;
+  letter-spacing: 18px;
+  line-height: 34px;
 }
 
-.introMobile {
-  display: none;
+.stage-left .stage-title h4 {
+  margin: 6px 0;
+  font-size: 2.9rem;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 2px;
+  line-height: 34px;
 }
 
-.btnExplore {
-  margin: 20px 0 10px 650px;
+.stage-left .stage-title h5 {
+  margin: 6px 0;
+  font-size: 2.8rem;
+  letter-spacing: 3px;
+  line-height: 34px;
 }
 
-.ctaContainer {
+.stage-left .stage-title p {
+  margin: 2px 0;
+  font-size: 1.8rem;
+  line-height: 27px;
+}
+
+.stage-left .stage-title .required {
+  color: red;
+}
+
+.stage-left .lime-card {
+  height: 490px;
+  width: 440px;
+  position: relative;
+  z-index: 2;
+  background-color: #8fedc2;
+}
+
+/* CONTENT PLATE */
+.float-plane {
+  min-height: 900px;
+  min-width: 100%;
   display: flex;
   justify-content: center;
-  padding-right: 50px;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
 }
 
-.cta {
-  margin: 200px 0 0 0;
+.float-plane .float-box {
+  width: 700px;
+  padding: 20px 30px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 14px 14px 20px 6px rgba(0, 0, 0, 0.2);
+}
+
+.float-plane .float-box .modal-box {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 0 10px 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.float-plane .float-box .content-box {
+  width: 100%;
+}
+
+.float-box .content-box .text-box {
+  height: 150px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: Avenir;
+  text-align: justify;
+}
+
+.content-box .text-box h5 {
+  width: fit-content;
+  font-size: 2.5rem;
+  line-height: 24px;
+  border-bottom: 1px solid #e0e1e2;
+}
+
+.content-box .text-box p {
+  margin: 8px 0;
+  color: #2e2f38;
+  text-align: justify;
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 18px;
+}
+
+.float-plane .float-box .agree-submit {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 10px 0;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.ctaBackground {
-  position: absolute;
-  z-index: -9;
-  padding: 110px 0 0 0;
+.float-box .agree-submit .agree-checktext {
+  margin-left: 4px;
+  padding-top: 1.5px;
+  font-family: Avenir;
+  font-size: 1.3em;
 }
 
-.ctaVideoContainer {
-  position: relative;
-  /* border: 1px solid red; */
-}
-
-.ctaVideo {
-  width: 769px;
-}
-
-.ctaVideoMobile {
-  display: none;
-}
-
-.btnPlay {
-  position: absolute;
-  top: 180px;
-  left: 320px;
-}
-
-.ctaText {
+/* SECURITY CHECKPOINT */
+.security-container {
+  background-color: #ffffff;
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 0 40px 0 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
 }
 
-.ctaTextMobile {
-  display: none;
-}
-
-.ctaText img {
-  padding: 25px 0;
-}
-
-/* What we do */
-
-.whatWeDoContainer {
-  margin: 170px 0 100px 160px;
-}
-
-.numListItem {
-  display: flex;
-  align-items: flex-start;
-  margin: 60px 0 0 0;
-}
-
-.oval {
-  position: relative;
-}
-
-.ovalNum {
+.security-header {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: Avenir;
+  width: 100%;
+  color: #2e2f38;
+  font-weight: bolder;
   position: absolute;
-  top: 15px;
-  left: 18px;
+  top: 200px;
 }
 
-.ovalDescription {
+.button-container {
+  margin-top: 40px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 13px 0 0 30px;
+  justify-content: center;
 }
 
-.numTitle {
-  margin: 0 0 20px 0;
+.ui.text.loader {
+  margin-top: 50px;
 }
 
-.mobileListItems {
-  display: none;
+.security-input {
+  width: 100%;
+  margin-top: 10px;
 }
 
-/* Tablet */
-
-@media (max-width: 1000px) {
-  .introContainer {
-    display: flex;
-    justify-content: center;
-  }
-
-  .introMobile {
-    display: none;
-  }
-
-  .intro {
-    margin: 150px 0 0 0;
-  }
-
-  .btnExplore {
-    margin: 20px 0 10px 450px;
-  }
-
-  .ctaContainer {
-    padding: 200px 0 0 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .cta {
-    margin: 0 0 0 0;
-  }
-
-  .ctaText {
-    display: none;
-  }
-
-  .ctaTextMobile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 100px;
-  }
-
-  .whatWeDoContainer {
-    margin: 0 auto;
-    padding: 170px 0 40px 0;
-  }
-
-  .whatWeDoImg {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .numListItem {
-    display: none;
-  }
-
-  .mobileListItems {
-    display: flex;
-  }
-
-  .mobileListItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  .mobileListItemTitle {
-    margin: 50px 0 20px 0;
-  }
+.security-container form {
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
-@media (max-width: 790px) {
+.preview-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  .landingBackground {
-    display: none;
-    position: absolute;
-    z-index: -10;
-  }
-
-  .ctaContainer {
-    background-color: #8FEDC2;
-    padding: 100px 0 100px 0;
-  }
-
-  .ctaBackground {
-    display: none;
-    background-color: #8FEDC2;
-  }
-
-  .ctaTextMobile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-right: 20px;
-  }
-
-  .mobileListItems {
-    flex-direction: column;
-    background-color: #24b4a5;
-    padding: 0 0 50px 0;
-  }
-
-  .introDesktop {
-    display: none;
-  }
-
-  .introMobile {
-    display: block;
-  }
-
-  .intro {
-    margin: 100px 0 0 0;
-  }
-
-  .btnExplore {
-    margin: 20px 0 10px 160px;
-  }
-  .ctaVideoContainer {
-    height: 328px;
-    margin: 60px 0;
-  }
-
-  .ctaVideo {
-    display: none;
-  }
-
-  .ctaVideoMobile {
-    display: block;
-    width: 100%;
-  }
-
-  .btnPlay {
-    position: absolute;
-    top: 30%;
-    left: 35%;
-  }
-
-  .whatWeDoContainer {
-    padding: 0 0 40px 0;
-  }
-
+.form-submit {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }

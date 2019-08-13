@@ -1,0 +1,126 @@
+.landing {
+    /* border: 1px solid red; */
+    max-width: 1440px;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .empowered {
+    display: flex;
+  }
+  
+  .empoweredLeft {
+    width: 66%;
+  }
+  
+  .empoweredLeftBoxes {
+    /* border: 1px solid green; */
+    padding: 145px 0 0 200px;
+  }
+  
+  .empoweredRight {
+    height: 600px;
+    background-color: #24b4a5;
+    width: 34%;
+  }
+  
+  .intro h1 {
+    font-size: 5.5rem;
+    font-weight: bold;
+    padding: 10px 0;
+  }
+  
+  .power {
+    color: #24b4a5;
+  }
+  
+  .intro h2 {
+    font-size: 2.5rem;
+    padding: 0 0 15px 0;
+  }
+  
+  .intro h3 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    font-style: italic;
+    padding: 8px 0 12px 0;
+  }
+  
+  .intro h4 {
+    font-size: 1.8rem;
+    padding: 5px 0;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .btnExplore {
+    background-color: #2d2f38;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 50px;
+    margin: 45px 140px 45px 0;
+    font-size: 1.7rem;
+    color: white;
+  }
+  
+  .introBottomBox {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .introBottomBoxRight {
+    height: 107px;
+    background-color: #8fedc2;
+    width: 50%;
+  }
+  
+  /* cta mid section */
+  
+  .cta {    
+    position: relative;
+  }
+  
+  .ctaBoxes {
+    /* border: 1px solid green; */
+    display: flex;
+  }
+  
+  .ctaBoxesLeft {
+    width: 66%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .ctaBoxesMid {
+    height: 410px;
+    background-color: #8fedc2;
+    width: 50%;
+  }
+  
+  .ctaVideo {
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    background-color: grey;
+    height: 480px;
+    width: 720px;
+    color: white;
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 200px;
+  }
+  
+  .ctaBoxesRight {
+    height: 410px;
+    background-color: #24b4a5;
+    width: 34%;
+  }
+  
+  .ctaBoxesBottom {
+    height: 250px;
+    background-color: #24b4a5;
+  }
+  
