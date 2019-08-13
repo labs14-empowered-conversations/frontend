@@ -1,3 +1,161 @@
+/* ------------------------------------*\
+RESET
+\*------------------------------------*/
+
+/* Use your own code or past solution for Great Idea Web Page CSS here! */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*------------------------------------*\
+my CSS
+\*------------------------------------*/
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 /* BACKGROUND */
 @font-face {
   font-family: Avenir;
@@ -22,12 +180,12 @@ button {
   border-radius: 3px;
 }
 
-.stage {
+.landing-stage {
   height: 1920px;
   width: 100%;
 }
 
-.stage-left {
+.landing-stage-left {
   min-height: 44%;
   width: 71.8%;
   position: absolute;
@@ -39,7 +197,7 @@ button {
   background-color: #ffffff;
 }
 
-.stage-left .stage-title {
+.landing-stage-left .landing-stage-title {
   width: 570px;
   margin: 160px 6% 40px 0;
   position: relative;
@@ -53,7 +211,7 @@ button {
   font-size: 2.1rem;
 }
 
-.stage-left .stage-title h1 {
+.landing-stage-left .landing-stage-title h1 {
   margin: 18px 0;
   font-size: 6.6rem;
   font-weight: bold;
@@ -61,7 +219,7 @@ button {
   line-height: 34px;
 }
 
-.stage-left .stage-title h4 {
+.landing-stage-left .landing-stage-title h4 {
   margin: 6px 0;
   font-size: 2.9rem;
   font-weight: bold;
@@ -70,20 +228,20 @@ button {
   line-height: 34px;
 }
 
-.stage-left .stage-title h5 {
+.landing-stage-left .landing-stage-title h5 {
   margin: 6px 0;
   font-size: 2.8rem;
   letter-spacing: 3px;
   line-height: 34px;
 }
 
-.stage-left .stage-title p {
+.landing-stage-left .landing-stage-title p {
   margin: 2px 0;
   font-size: 1.8rem;
   line-height: 27px;
 }
 
-.stage-left .lime-card {
+.landing-stage-left .landing-lime-card {
   height: 490px;
   width: 535px;
   position: relative;
@@ -91,14 +249,14 @@ button {
   background-color: #8fedc2;
 }
 
-.stage-left .stage-title .button-box {
+.landing-stage-left .landing-stage-title .landing-button-box {
   width: 100%;
   margin: 40px 0 0;
   display: flex;
   justify-content: flex-end;
 }
 
-.stage-plane {
+.landing-stage-plane {
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -109,7 +267,7 @@ button {
   background: transparent;
 }
 
-.stage-plane .stage-trap {
+.landing-stage-plane .landing-stage-trap {
   height: 0;
   width: 1040px;
   top: 650px;
@@ -121,7 +279,7 @@ button {
 }
 
 /* CONTENT */
-.float-plane {
+.landing-float-plane {
   min-height: 100vh;
   min-width: 100vw;
   padding-top: 65px;
@@ -132,7 +290,7 @@ button {
   background: transparent;
 }
 
-.stage .float-plane .vid-floater {
+.landing-stage .landing-float-plane .landing-vid-floater {
   height: 520px;
   width: 720px;
   display: flex;
@@ -143,7 +301,7 @@ button {
   background-color: #2e2f38;
 }
 
-.stage .float-plane .text-floater {
+.landing-stage .landing-float-plane .landing-text-floater {
   height: 400px;
   width: 270px;
   padding: 0 20px;
@@ -156,7 +314,7 @@ button {
   text-align: right;
 }
 
-.float-plane .text-floater h3 {
+.landing-float-plane .landing-text-floater h3 {
   margin: 6px 0;
   font-size: 2.4rem;
   font-weight: bold;
@@ -164,7 +322,7 @@ button {
   line-height: 34px;
 }
 
-.float-plane .text-floater p {
+.landing-float-plane .landing-text-floater p {
   margin: 6px 0;
   font-size: 1.8rem;
   letter-spacing: 1px;
