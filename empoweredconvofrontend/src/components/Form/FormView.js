@@ -74,7 +74,7 @@ class FormView extends React.Component {
   };
 
   submitKey = e => {
-    let keys = ['northwestern', 'stanford', 'michigan'];
+    let keys = 'goblue';
     keys.includes(this.state.appKey)
       ? (function(env) {
           env.setState({ isVerifying: true });
