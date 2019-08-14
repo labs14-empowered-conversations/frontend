@@ -4,6 +4,7 @@ import { initializeConvo } from '../../actions/initConvoActions';
 import { Form, Checkbox } from 'formsy-semantic-ui-react';
 import {
   Button,
+  Header,
   Container,
   Modal,
   Segment,
@@ -139,25 +140,6 @@ class FormView extends React.Component {
         </div>
         <div className="float-plane">
           <Segment className="float-box">
-            <Container className="modal-box">
-              <Modal
-                trigger={
-                  <Button
-                    size="huge"
-                    style={{ backgroundColor: '#2E2F38', color: 'white' }}
-                    content={'Terms of Service'}
-                    onClick={this.handleModal1Open}
-                  />
-                }
-                open={this.state.isModalOpen}
-                onClose={this.handleModalOpen}
-              >
-                <Modal.Header>Terms of Service</Modal.Header>
-                <Modal.Content>
-                  <TOS />
-                </Modal.Content>
-              </Modal>
-            </Container>
             <Container className="content-box">
               {/* <Form onValidSubmit={() => this.submitHandler()} size={"huge"}> */}
               <Form onValidSubmit={() => this.handleModal2Open()} size={'huge'}>
@@ -215,10 +197,29 @@ class FormView extends React.Component {
                 </Grid>
                 <Container className="agree-submit">
                   <Checkbox
+                    fluid
+                    className="termsCheckbox"
                     name="survivorLiability"
                     label={
                       <label className="agree-checktext">
-                        I accept the Terms of Service
+                        I accept the
+                        <Modal
+                          trigger={
+                            <Header
+                              as="h3"
+                              color="#2E2F38"
+                              content={'Terms of Service'}
+                              onClick={this.handleModal1Open}
+                            />
+                          }
+                          open={this.state.isModalOpen}
+                          onClose={this.handleModalOpen}
+                        >
+                          <Modal.Header>Terms of Service</Modal.Header>
+                          <Modal.Content>
+                            <TOS />
+                          </Modal.Content>
+                        </Modal>
                       </label>
                     }
                     validations="isTrue"
@@ -263,7 +264,9 @@ class FormView extends React.Component {
         </div>
       </div>
     );
-    return <>{!this.state.isVerified ? securityView : formView}</>;
+    // return <>{!this.state.isVerified ? securityView : formView}</>;
+
+    return <>{formView}</>;
   }
 }
 
