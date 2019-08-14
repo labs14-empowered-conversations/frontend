@@ -32,7 +32,7 @@ class App extends Component {
           <div className="App">
             <Route exact path="/form" component={FormView} />
           </div>
-          <div className="App">
+          <div className="App-Landing">
             <Route exact path="/" component={Landing} />
           </div>
           <div className="App-About">

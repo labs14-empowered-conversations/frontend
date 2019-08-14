@@ -25,11 +25,11 @@ export default class Landing extends React.Component {
               </Link>
             </div>
           </div>
-          <div className="landing-lime-card" />
+          {/* <div className="landing-lime-card" /> */}
         </div>
-        <div className="landing-stage-plane">
+        {/* <div className="landing-stage-plane">
           <div className="landing-stage-trap" />
-        </div>
+        </div> */}
         <div className="landing-float-plane">
           <div className="landing-vid-floater">Video goes here.</div>
           <div className="landing-text-floater">
