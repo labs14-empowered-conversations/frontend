@@ -3,7 +3,30 @@ import { Link } from 'react-router-dom';
 import './Landing.css';
 
 export default class Landing extends React.Component {
+  state = {
+    mobileChange: false
+  }
+  forceUpdate = () => {
+    if(window.innerWidth >= 950) {
+      this.setState({ mobileChange: false });
+    } else if (window.innerWidth <= 950) {
+      this.setState({ mobileChange: true });
+    }
+  } 
+  
+  resize = () => this.forceUpdate()
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resize)
+    this.forceUpdate();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize)
+  }
+
   render() {
+    console.log(this.state.mobileChange, 'mobile changed');
     return (
       <div className="landing-stage">
         <div className="landing-stage-left">
@@ -31,10 +54,15 @@ export default class Landing extends React.Component {
           <div className="landing-stage-trap" />
         </div> */}
         <div className="landing-float-plane">
+          { this.state.mobileChange ?
+            <>
+            <h3 className="tablet-video-header">One Conversation<br/>at a Time</h3>
+            </> : null
+          } 
           <div className="landing-float-centerpiece">
             <div className="landing-vid-floater">Video goes here.</div>
             <div className="landing-text-floater">
-              <h3>One Conversation<br/>at a Time</h3>
+              { !this.state.mobileChange ? <><h3>One Conversation<br/>at a Time</h3></> : null }
               <p>
                 <span>
                   Our tool takes the burden off of the survivor for having to
@@ -52,7 +80,8 @@ export default class Landing extends React.Component {
                 <button>Use The Tool</button>
               </Link>
             </div>
-          </div>
+          </div> 
+          {/* float centerpiece end */}
           <div className="landing-statement">
             <h2>What We Do</h2>
             <div className="bullet-point">
