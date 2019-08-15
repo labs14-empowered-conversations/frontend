@@ -182,8 +182,8 @@ button {
 
 .landing-stage {
   height: 190em;
-  width: 100%;
-  background-image: url(../../assets/Background_new.png);
+  width: 144em;
+  background: url(../../assets/Background_new.png) no-repeat center;
 }
 
 .landing-stage-left {
@@ -195,7 +195,6 @@ button {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  /* background-color: #ffffff; */
 }
 
 .landing-stage-left .landing-stage-title {
@@ -281,35 +280,43 @@ button {
 
 /* CONTENT */
 .landing-float-plane {
-  min-height: 190em;
-  min-width: 100vw;
-  padding-top: 2em;
+  min-height: 175em;
+  width: calc(90% - 5px);
+  padding-top: 38em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 5;
+  z-index: 3;
   background: url(../../assets/Rectangle.png) no-repeat center;
 }
 
-.landing-stage .landing-float-plane .landing-vid-floater {
+.landing-float-plane .landing-float-centerpiece {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 4;
+}
+
+.landing-float-plane .landing-float-centerpiece .landing-vid-floater {
   height: 520px;
   width: 720px;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 6;
+  z-index: 5;
   color: #ffffff;
   background-color: #2e2f38;
 }
 
-.landing-stage .landing-float-plane .landing-text-floater {
-  height: 400px;
-  width: 270px;
-  padding: 0 20px;
+.landing-float-plane .landing-float-centerpiece .landing-text-floater {
+  height: 40em;
+  width: 29em;
+  padding: 0 2em;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  z-index: 6;
+  z-index: 5;
   color: #2e2f38;
   font-family: Avenir;
   text-align: right;
@@ -321,6 +328,7 @@ button {
   font-weight: bold;
   letter-spacing: 3px;
   line-height: 34px;
+  border-bottom: 1px solid #2e2f38;
 }
 
 .landing-float-plane .landing-text-floater p {
@@ -328,4 +336,58 @@ button {
   font-size: 1.8rem;
   letter-spacing: 1px;
   line-height: 34px;
+}
+
+.landing-float-plane .landing-statement {
+  height: 20rem;
+  width: calc(90% - 5px);
+  margin: 20rem 0 0 24rem;
+  font-family: Avenir;
+}
+
+.landing-float-plane .landing-statement h2 {
+  margin-bottom: 1.8em;
+  color: #ffffff;
+  font-size: 2.9rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: 34px;
+}
+
+.landing-statement .bullet-point {
+  margin-bottom: 4em;
+  display: flex;
+  flex-direction: row;
+  color: #ffffff;
+  font-size: 2.1rem;
+}
+
+.landing-statement .bullet-point .bullet {
+  height: 4rem;
+  width: 4rem;
+  padding-top: .30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #2e2f38;
+  background-color: #ffffff;
+  font-size: 2.2rem;
+  border-radius: 50%;
+  border: transparent;
+}
+
+.landing-statement .bullet-point .bullet-point-text {
+  margin-left: 3rem;
+  padding-top: 1.3rem;
+}
+
+.bullet-point .bullet-point-text h4 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 2.3rem;
+  font-weight: bold;
+}
+
+.bullet-point .bullet-point-text p {
+  color: #ffffff;
 }
