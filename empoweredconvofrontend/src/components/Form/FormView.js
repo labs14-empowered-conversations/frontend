@@ -28,6 +28,7 @@ class FormView extends React.Component {
     isModal2Open: false,
     isVerified: false,
     isVerifying: false,
+    columns: 1,
     appKey: '',
   };
 
@@ -142,8 +143,60 @@ class FormView extends React.Component {
           <Segment className="float-box">
             <Container className="content-box">
               {/* <Form onValidSubmit={() => this.submitHandler()} size={"huge"}> */}
-              <Form onValidSubmit={() => this.handleModal2Open()} size={'huge'}>
-                <Grid columns={2} divided>
+              <Form onValidSubmit={() => this.handleModal2Open()} size={'large'}>
+                <Grid columns={1} className="tablet mobile only">
+                  <Grid.Column>
+                    <div className="text-box">
+                      <h5>Your Information</h5>
+                      <p>
+                        Don't worry! We'll keep you anonymous, no matter what!
+                        We just need your cell phone number to give you an
+                        update when the recipient gets the text.
+                      </p>
+                    </div>
+                    <Form.Group grouped>
+                      <Form.Input
+                        name="survivornumber"
+                        label="Your Phone Number "
+                        validations="isNumeric"
+                        value={this.state.convoRequest.survivornumber}
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                    </Form.Group>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <div className="text-box">
+                      <h5>Recipient's Information</h5>
+                      <p>
+                        This person will receive the text that informs them that
+                        someone in their life wants to have a hard conversation.
+                      </p>
+                    </div>
+                    <Form.Group grouped>
+                      <Form.Input
+                        name="ffname"
+                        label="Recipient's Name "
+                        validations="isWords"
+                        value={this.state.convoRequest.ffname}
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                      <Form.Input
+                        name="ffnumber"
+                        label="Recipient's Phone Number "
+                        validations="isNumeric"
+                        value={this.state.convoRequest.ffnumber}
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                    </Form.Group>
+                  </Grid.Column>
+                </Grid>
+                <Grid columns={2} divided className="computer only">
                   <Grid.Column>
                     <div className="text-box">
                       <h5>Your Information</h5>
@@ -197,7 +250,6 @@ class FormView extends React.Component {
                 </Grid>
                 <Container className="agree-submit">
                   <Checkbox
-                    fluid
                     className="termsCheckbox"
                     name="survivorLiability"
                     label={
