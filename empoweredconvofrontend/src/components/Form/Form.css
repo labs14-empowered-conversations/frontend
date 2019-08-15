@@ -60,7 +60,7 @@
   background-color: #8fedc2;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 992px) {
   .stage-left .stage-title {
     width: 35rem;
   }
@@ -70,7 +70,7 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
 
   .stage-left .stage-title {
     width: 25rem;
@@ -160,10 +160,10 @@
   margin-left: 0.4rem;
   padding-top: 1.5px;
   font-family: Avenir;
-  font-size: 1.3em;
+  font-size: 1.3rem;
 }
 
-@media only screen and (max-width: 990px) {
+@media only screen and (max-width: 992px) {
   .float-plane {
     margin-top: 10rem;
   }
@@ -175,7 +175,14 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 520px) {
+  .float-box .agree-submit .agree-checktext {
+    font-size: 1.2rem;
+  }
+  .float-box .agree-submit .agree-checktext h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
   .float-plane {
     margin-top: 10rem;
   }
