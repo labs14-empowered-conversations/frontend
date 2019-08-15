@@ -73,7 +73,7 @@
 @media only screen and (max-width: 500px) {
 
   .stage-left .stage-title {
-    width: 30rem;
+    width: 25rem;
     padding-right: 1rem;
   }
 
@@ -82,7 +82,7 @@
   }
 
   .stage-left .stage-title p {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -180,10 +180,10 @@
     margin-top: 10rem;
   }
   .float-plane .float-box {
-    width: 32rem;
+    width: 31rem;
   }
   .float-box .content-box .text-box {
-    height: 12rem;
+    height: 12.5rem;
   }
 }
 
