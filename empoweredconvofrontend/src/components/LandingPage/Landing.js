@@ -1,260 +1,132 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import './Landing.css';
+import {Responsive} from 'semantic-ui-react'
 
-class Landing extends React.Component {
+export default class Landing extends React.Component {
+  state = {
+    mobileChange: false
+  }
+  forceUpdate = () => {
+    if(window.innerWidth >= 950) {
+      this.setState({ mobileChange: false });
+    } else if (window.innerWidth <= 950) {
+      this.setState({ mobileChange: true });
+    }
+  } 
+  
+  resize = () => this.forceUpdate()
+
+  componentDidMount() {
+    window.addEventListener('resize', this.resize)
+    this.forceUpdate();
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.resize)
+  }
+
   render() {
+    console.log(this.state.mobileChange, 'mobile changed');
     return (
-      <div className="landing">
-        <img
-          className="landingBackground"
-          src="assets/Background new.png"
-          alt="background"
-        />
-
-        <section className="introContainer">
-          <div className="introDesktop">
-            <div className="intro">
-              <img src="assets/intro/Today I am . . ..png" alt="today i am" />
-              <img src="assets/intro/EMPOWERED.png" alt="empowered" />
-              <img
-                src="assets/intro/When words matter mo.png"
-                alt="when words matter"
-              />
-              <img
-                src="assets/intro/A survivor-activated.png"
-                alt="survivor activated tool"
-              />
-            </div>
-
-            <Link to="/form">
-              <img
-                className="btnExplore"
-                src="assets/intro/explore button.png"
-                alt="explore"
-              />
-            </Link>
-          </div>
-
-          <div className="introMobile">
-            <div className="intro">
-              <img
-                src="assets/intro/mobile/Today I am . . ..png"
-                alt="today i am"
-              />
-              <img src="assets/intro/mobile/EMPOWERED.png" alt="empowered" />
-              <img
-                src="assets/intro/mobile/When words matter mo.png"
-                alt="when words matter"
-              />
-              <img
-                src="assets/intro/mobile/A survivor-activated.png"
-                alt="survivor activated tool"
-              />
-            </div>
-            <Link to="/form">
-              <img
-                className="btnExplore"
-                src="assets/intro/mobile/explore button.png"
-                alt="explore"
-              />
-            </Link>
-          </div>
-        </section>
-
-        <section className="ctaContainer">
-          <img
-            className="ctaBackground"
-            src="assets/cta/Rectangle.png"
-            alt="background rectangle"
-          />
-
-          <div className="ctaTextMobile">
-            <img
-              className="oneConversationMobile"
-              src="assets/cta/mobile/One Conversation at.png"
-              alt="one conversation"
-            />
-          </div>
-
-          <div className="cta">
-            <div className="ctaVideoContainer">
+      <div className="landing-stage">
+        <div className="landing-stage-left">
+          <div className="landing-stage-title">
+            <h5>Today I am . . .</h5>
+            <h1>
+              <span>EM</span>
+              <span style={{ color: '#24b4a5' }}>POWER</span>
+              <span>ED</span>
+            </h1>
+            <h4>When words matter most.</h4>
+            <p>
+              A survivor-activated tool that educates and prepares the person
+              they will disclose to before the conversation takes place.
+            </p>
+            <div className="landing-button-box">
               <Link to="/learn">
-                <img
-                  className="ctaVideo"
-                  src="assets/cta/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
-                  alt="cta video"
-                />
-                <img
-                  className="ctaVideoMobile"
-                  src="assets/cta/mobile/katherine-hanlon-bHhEJAXyFOg-unsplash.png"
-                  alt="cta video"
-                />
-
-                <img
-                  className="btnPlay"
-                  src="assets/cta/play button.png"
-                  alt="video play"
-                />
+                <button className="landingBtn">Explore</button>
               </Link>
             </div>
-
-            <div className="ctaText">
-              <img
-                className="oneConversation"
-                src="assets/cta/One Conversation at.png"
-                alt="one conversation"
-              />
-
-              <img
-                className="outTool"
-                src="assets/cta/Our tool takes the b.png"
-                alt="our tool"
-              />
-
+          </div>
+          {/* <div className="landing-lime-card" /> */}
+        </div>
+        {/* <div className="landing-stage-plane">
+          <div className="landing-stage-trap" />
+        </div> */}
+        <div className="landing-float-plane">
+          { this.state.mobileChange ?
+            <>
+            <h3 className="tablet-video-header">One Conversation<br/>at a Time</h3>
+            </> : null
+          } 
+          <div className="landing-float-centerpiece">
+            <div className="landing-vid-floater">Video goes here.</div>
+            <div className="landing-text-floater">
+              { !this.state.mobileChange ? <><h3>One Conversation<br/>at a Time</h3></> : null }
+              <p>
+                <span>
+                  Our tool takes the burden off of the survivor for having to
+                </span>
+                <span style={{ fontWeight: 'bold' }}>
+                  {' '}
+                  educate their loved ones about assault{' '}
+                </span>
+                <span>
+                  during disclosure because we provide that training ahead of
+                  time.
+                </span>
+              </p>
               <Link to="/form">
-                <img
-                  className="btnCta"
-                  src="assets/cta/Use The Tool Button.png"
-                  alt="use tool"
-                />
+                <button>Use The Tool</button>
               </Link>
             </div>
-          </div>
-
-          <div className="ctaTextMobile">
-            <img
-              className="ourToolMobile"
-              src="assets/cta/mobile/Our tool takes the b.png"
-              alt="Our tool"
-            />
-          </div>
-        </section>
-
-        <section className="whatWeDoContainer">
-          <img
-            className="whatWeDoImg"
-            src="assets/whatwedo/What We Do.png"
-            alt="what we do"
-          />
-
-          <div className="numListItem">
-            <div className="oval">
-              <img src="assets/whatwedo/1/Oval Copy.png" alt="oval" />
-              <img
-                className="ovalNum"
-                src="assets/whatwedo/1/1.png"
-                alt="number"
-              />
+          </div> 
+          {/* float centerpiece end */}
+          {!this.state.mobileChange ?
+          <div className="landing-statement">
+            <h2>What We Do</h2>
+            <div className="bullet-point">
+              <div className="bullet">1</div>
+              <div className="bullet-point-text">
+                <h4>Communicate</h4>
+                <p>We've got your back when it comes to anonymously reaching out to a loved one!</p>
+              </div>
             </div>
-
-            <div className="ovalDescription">
-              <img
-                className="numTitle"
-                src="assets/whatwedo/1/Communicate.png"
-                alt="Communicate"
-              />
-              <img
-                className="numDescription"
-                src="assets/whatwedo/1/We got your back whe.png"
-                alt="we got your back"
-              />
+            <div className="bullet-point">
+              <div className="bullet">2</div>
+              <div className="bullet-point-text">
+                <h4>Educate</h4>
+                <p>We'll educate them about assault and how to support you.</p>
+              </div>
+            </div>
+            <div className="bullet-point">
+              <div className="bullet">3</div>
+              <div className="bullet-point-text">
+                <h4>Empower</h4>
+                <p>Have a conversation of Empowerment instead of fear.</p>
+              </div>
             </div>
           </div>
-
-          <div className="numListItem">
-            <div className="oval">
-              <img src="assets/whatwedo/1/Oval Copy.png" alt="oval" />
-              <img
-                className="ovalNum"
-                src="assets/whatwedo/2/2.png"
-                alt="number"
-              />
+          : 
+          <div className="landing-statement">
+            <h2>What We Do</h2>
+            <div className="landing-column">
+              <h4>Communicate</h4>
+              <p>We've got your back when it comes to anonymously reaching out to a loved one!</p>
             </div>
-
-            <div className="ovalDescription">
-              <img
-                className="numTitle"
-                src="assets/whatwedo/2/Educate.png"
-                alt="Educate"
-              />
-              <img
-                className="numDescription"
-                src="assets/whatwedo/2/We’ll educate them a.png"
-                alt="We’ll educate them"
-              />
+            <div className="landing-column">
+              <h4>Educate</h4>
+              <p>We'll educate them about assault and how to support you.</p>
+            </div>
+            <div className="landing-column">
+              <h4>Empower</h4>
+              <p>Have a conversation of Empowerment instead of fear.</p>
             </div>
           </div>
-
-          <div className="numListItem">
-            <div className="oval">
-              <img src="assets/whatwedo/1/Oval Copy.png" alt="oval" />
-              <img
-                className="ovalNum"
-                src="assets/whatwedo/3/3.png"
-                alt="number"
-              />
-            </div>
-
-            <div className="ovalDescription">
-              <img
-                className="numTitle"
-                src="assets/whatwedo/3/Empower.png"
-                alt="Empower"
-              />
-              <img
-                className="numDescription"
-                src="assets/whatwedo/3/Have a conversation.png"
-                alt="Have a conversation"
-              />
-            </div>
-          </div>
-
-          <div className="mobileListItems">
-            <div className="mobileListItem">
-              <img
-                className="mobileListItemTitle"
-                src="assets/whatwedo/1/mobile/Communicate.png"
-                alt="Communicate"
-              />
-              <img
-                className="mobileListItemDesc"
-                src="assets/whatwedo/1/tablet/We got your back whe.png"
-                alt="We got your back"
-              />
-            </div>
-
-            <div className="mobileListItem">
-              <img
-                className="mobileListItemTitle"
-                src="assets/whatwedo/2/mobile/Educate.png"
-                alt="Educate"
-              />
-              <img
-                className="mobileListItemDesc"
-                src="assets/whatwedo/2/tablet/We’ll educate them a.png"
-                alt="We’ll educate them a"
-              />
-            </div>
-
-            <div className="mobileListItem">
-              <img
-                className="mobileListItemTitle"
-                src="assets/whatwedo/3/mobile/Empower.png"
-                alt="Empower"
-              />
-              <img
-                className="mobileListItemDesc"
-                src="assets/whatwedo/3/tablet/Have a conversation.png"
-                alt="Have a conversation"
-              />
-            </div>
-          </div>
-        </section>
-      </div>
+          }
+        </div>
+        </div>
     );
   }
 }
-
-export default Landing;
