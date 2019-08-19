@@ -395,73 +395,6 @@ button {
   font-family: Avenir;
 }
 
-/*------------- mobile -------------*/
-
-@media(max-width: 550px) {
-
-  .landing-stage-left {
-    min-height: 44%;
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .landing-stage-left .landing-stage-title {
-    width: 37rem;
-    margin: 6.5rem 0 6.2rem 0;
-    padding: 0 1rem;
-    font-size: 0.1rem;
-    /* border: 1px solid red; */
-  }
-
-  .landing-stage-left .landing-stage-title h1 {
-    font-size: 3.8rem;
-    letter-spacing: 1.4rem;
-  }
-  
-  .landing-stage-left .landing-stage-title h4 {
-    font-size: 2rem;
-  }
-  
-  .landing-stage-left .landing-stage-title h5 {
-    font-size: 2rem;
-  }
-  
-  .landing-stage-left .landing-stage-title p {
-    font-size: 1.6rem;
-  }
-  
-  .tablet-video-header {
-    align-self: flex-end;
-    margin: 0.4rem 2.0rem 0.4rem 0;
-    font-size: 1.8rem;
-    font-weight: bolder;
-    letter-spacing: .3rem;
-    line-height: 3.7rem;
-  }
-  .landing-float-plane .landing-float-centerpiece .landing-text-floater {
-    padding: 0 4em;
-  }
-  .landing-float-plane .landing-text-floater h3 {
-    font-size: 1.8rem;
-    font-weight: bolder;
-  }
-
-  .landing-float-plane .landing-text-floater p {
-    font-weight: bold;
-    font-size: 1.35rem;
-  }
-}
-
-@media(max-width: 850px) {
-  .tablet-video-header {
-    font-size: 1.4rem;
-  }
-}
-
 /* tablet */
 @media(max-width: 950px) {
   .landing-float-plane .landing-float-centerpiece {
@@ -487,6 +420,62 @@ button {
     font-weight: bold;
     width: 100%;
     font-size: 1.35rem;
+  }
+}
+
+@media(max-width: 650px){
+  .landing-float-plane {
+    background: url(../../assets/Rectangle3.png) no-repeat center;
+    margin-right: 0;
+    width: 100%;
+    padding-top: 20em;
+  }
+  .landing-float-plane .landing-text-floater {
+    font-size: 1.0rem;
+    line-height: 1;
+  }
+  .landing-float-plane .landing-float-centerpiece .landing-vid-floater {
+    width: 100%;
+  }
+  .tablet-video-header {
+    font-size: 1.8rem;
+  }
+}
+
+@media(max-width: 550px) {
+  .landing-stage-left {
+    width: 100%;
+    align-items: center;
+  }
+
+  .landing-stage-left .landing-stage-title {
+    width: 38rem;
+    margin: 6.5rem 0 6.2rem 0;
+    font-size: 0.1rem;
+    padding: 0 1rem;
+  }
+
+  .landing-stage-left .landing-stage-title h1 {
+    font-size: 3.8rem;
+    letter-spacing: 1.4rem;
+  }
+  
+  .landing-stage-left .landing-stage-title h4 {
+    font-size: 1.6rem;
+  }
+  
+  .landing-stage-left .landing-stage-title h5 {
+    font-size: 1.8rem;
+  }
+  
+  .landing-stage-left .landing-stage-title p {
+    font-size: 1.4rem;
+  }
+}
+
+@media(max-width: 500px) {
+  .tablet-video-header {
+    font-size: 1.4rem;
   }
 }
 
@@ -620,6 +609,38 @@ button {
     color: #ffffff;
     font-size: 1.6rem;
     line-height: 2;
+  }
+}
+
+@media(max-width: 650px) {
+  .landing-float-plane .landing-statement {
+    margin-left: 0;
+  }
+  .landing-float-plane .landing-statement h2 {
+    margin-bottom: 2rem;
+  }
+  .landing-float-plane .landing-statement .landing-column {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+  .landing-float-plane .landing-statement .landing-column p {
+    width: 50%;
+    margin: 0 25% 0 25%;
+  }
+}
+
+@media(max-width: 500px) {
+  .landing-float-plane .landing-statement .landing-column p {
+    width: 80%;
+    margin: 0 10% 1rem 10%;
+  }
+
+  .landing-float-plane .landing-statement .landing-column h4 {
+    text-align: left;
+    width: 80%;
+    margin: 0 10% 0 10%;
+    margin-bottom: 2rem;
   }
 }
 
