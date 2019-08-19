@@ -197,10 +197,6 @@ button {
 }
 
 .landing-stage-left .landing-stage-title {
-  /*
-    width: 570px;
-    margin: 160px 6% 40px 0;
-  */
   width: 27em;
   margin: 6.5rem 12% 6.2rem 0;
   position: relative;
@@ -244,14 +240,6 @@ button {
   line-height: 2.7rem;
 }
 
-/* .landing-stage-left .landing-lime-card {
-  height: 490px;
-  width: 535px;
-  position: relative;
-  z-index: 2;
-  background-color: #8fedc2;
-} */
-
 .landing-stage-left .landing-stage-title .landing-button-box {
   width: 100%;
   margin-top: 2em;
@@ -259,34 +247,17 @@ button {
   justify-content: flex-end;
 }
 
-/* .landing-stage-plane {
-  min-height: 100vh;
-  min-width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 3;
-  pointer-events: none;
-  background: transparent;
+/*------------- MOBILE -------------*/
+@media (max-width: 700px) {
+  
 }
 
-.landing-stage-plane .landing-stage-trap {
-  height: 0;
-  width: 1040px;
-  top: 650px;
-  position: relative;
-  z-index: 4;
-  border-bottom: 650px solid #ffffff;
-  border-left: 650px solid transparent;
-  box-shadow: 14px 9px 12px rgba(0, 0, 0, 0.2);
-} */
-
-
+@media (min-width: 375px) {
+  
+}
 
 /* CONTENT */
 .landing-float-plane {
-  /* max-width: 100%; */
-  /* height: auto; */
   min-height: 165em;
   width: calc(90% - 5px);
   padding-top: 38em;
@@ -324,7 +295,6 @@ button {
   }
   .landing-float-plane .landing-float-centerpiece {
     width: 90%;
-    border: 1px solid red;
   }
   .landing-float-plane .landing-float-centerpiece .landing-vid-floater {
     height: 41.6rem;
@@ -342,7 +312,37 @@ button {
   }
 }
 
-@media(max-width: 950px) {
+@media(max-width: 950px) {  
+
+  .landing-stage-left {
+    width: 90%;
+    align-items: center;
+  }
+
+  .landing-stage-left .landing-stage-title {
+    width: 42rem;
+    margin: 6.5rem 0 6.2rem 0;
+    font-size: 0.1rem;
+    padding: 0 1rem;
+  }
+
+  .landing-stage-left .landing-stage-title h1 {
+    font-size: 4.5rem;
+    letter-spacing: 1.4rem;
+  }
+  
+  .landing-stage-left .landing-stage-title h4 {
+    font-size: 2rem;
+  }
+  
+  .landing-stage-left .landing-stage-title h5 {
+    font-size: 2rem;
+  }
+  
+  .landing-stage-left .landing-stage-title p {
+    font-size: 1.6rem;
+  }
+
   .landing-float-plane {
     background: url(../../assets/Rectangle.png) no-repeat center;
   }
@@ -395,8 +395,45 @@ button {
   font-family: Avenir;
 }
 
-/* mobile */
+/*------------- mobile -------------*/
+
 @media(max-width: 550px) {
+
+  .landing-stage-left {
+    min-height: 44%;
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .landing-stage-left .landing-stage-title {
+    width: 37rem;
+    margin: 6.5rem 0 6.2rem 0;
+    padding: 0 1rem;
+    font-size: 0.1rem;
+    /* border: 1px solid red; */
+  }
+
+  .landing-stage-left .landing-stage-title h1 {
+    font-size: 3.8rem;
+    letter-spacing: 1.4rem;
+  }
+  
+  .landing-stage-left .landing-stage-title h4 {
+    font-size: 2rem;
+  }
+  
+  .landing-stage-left .landing-stage-title h5 {
+    font-size: 2rem;
+  }
+  
+  .landing-stage-left .landing-stage-title p {
+    font-size: 1.6rem;
+  }
+  
   .tablet-video-header {
     align-self: flex-end;
     margin: 0.4rem 2.0rem 0.4rem 0;
@@ -502,6 +539,7 @@ button {
 
 .landing-float-plane .landing-statement h2 {
   margin-bottom: 1.8em;
+  text-align: left;
   color: #ffffff;
   font-size: 2.9rem;
   font-weight: bold;
@@ -532,6 +570,7 @@ button {
 }
 
 .landing-statement .bullet-point .bullet-point-text {
+  text-align: left;
   margin-left: 3rem;
   padding-top: 1.3rem;
 }
@@ -547,16 +586,51 @@ button {
   color: #ffffff;
 }
 
+@media(max-width: 950px) {
+  .landing-float-plane .landing-statement {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 12%;
+    width: 100%;
+  }
+
+  .landing-float-plane .landing-statement h2 {
+    padding-bottom: 2rem;
+    width: 80%;
+    text-align: center;
+    border-bottom: 0.01rem solid white;
+  }
+
+  .landing-float-plane .landing-statement .landing-column {
+    width: 28%;
+    margin: 0 1rem 0 1rem;
+  }
+
+  .landing-float-plane .landing-statement .landing-column h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-size: 2.4rem;
+    font-weight: bold;
+  }
+  .landing-float-plane .landing-statement .landing-column p {
+    text-align: left;
+    padding-left: 0.5rem;
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 2;
+  }
+}
+
 @media (min-width: 1520px) {
   .landing-stage-left .landing-stage-title {
     margin: 6.5rem 16.5% 6.2rem 0;
-    border: 1px solid red;
   }
 }
 
 @media (min-width: 1980px) {
   .landing-stage-left .landing-stage-title {
     margin: 6.5rem 19.5% 6.2rem 0;
-    border: 1px solid red;
   }
 }

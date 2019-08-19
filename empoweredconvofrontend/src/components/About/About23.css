@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../../assets/AvenirLTStd-Book.otf);
+}
+
+.about-page{
+    /*border:solid blue;*/
+    margin:auto;
+   /* src: "assets/Background new.png";*/
+    height: 1918px;	width: 1440px;
+   /*padding-top:130px;*/
+   display:flex;
+   flex-direction: column;
+}
+
+
+
+@media (max-width:500px){
+    .about-page{
+        height: 1930px;	width: 100%;
+       /* border:solid red;*/
+    }
+
+
+}
+
+.about-text{
+  /* border:solid pink;*/
+    display:flex;
+    flex-direction: column;
+    padding-left:18%;
+    position: relative;
+    top:205px;
+  
+}
+
+@media (max-width:500px){
+    .about-text{
+       padding:0px;
+       width:100%;
+    }
+
+
+}
+
+
+#who{
+  /*  border:solid red;*/
+   /* margin-left:25%;*/
+
+   /* height: 55px;*/	width: 276px;	color: #2E2F38;	font-family: Avenir;	font-size: 40px;	font-weight: 500;	line-height: 55px;
+}
+
+
+
+#A{
+    /*border:solid red;*/
+    text-align: left;
+    /*margin-left:25%;*/
+    margin-top:15px;
+
+
+  /* height: 81px;*/	width: 474px;	color: #2E2F38;	font-family: Avenir;	font-size: 20px;	font-weight: 300;	line-height: 27px;
+
+}
+#our{
+   /* border:solid red;*/
+    text-align: left;
+    margin-top:15px;
+
+    /*margin-left:25%;*/
+
+
+
+   /* height: 108px;*/	width: 474px;	color: #2E2F38;	font-family: Avenir;	font-size: 20px;	font-weight: 300;	line-height: 27px;
+
+}
+
+@media (max-width:500px){
+   #who{
+       
+        /*border:solid blue;*/
+        padding-left:25px;
+        margin-left:10px;
+    
+     }
+    #A{
+       width:90%;
+      /* border:solid blue;*/
+       padding-left:15px;
+       margin:auto;
+    }
+    #our{
+        width:90%;
+        /*border:solid blue;*/
+        padding-left:15px;
+        margin:auto;
+        margin-top:15px;
+
+    }
+
+
+}
+
+.aboutbtn{
+    /*border:solid red;*/
+    cursor: pointer;
+    margin-left:23%;
+    height: 25px;	width: 107.34px;	color: #FFFFFF;	font-family: Avenir;	  font-size: 20px;
+	font-weight: 500;	line-height: 25px;
+    height: 49px;	width: 163px; border:1px solid;	border-radius: 5px;	background-color: #2E2F38;	box-shadow: 0 15px 20px -10px;
+}
+.aboutbtn:hover{
+    color: #24B4A5;
+
+}
+
+@media (max-width:500px){
+    .aboutbtn{
+        margin-left:50%;
+        margin-top:15px;
+
+
+    }
+
+
+}
+
+.aboutfooter{
+   /* border:solid red;*/
+    position: relative;
+    top:1479px;
+    
+    
+}
