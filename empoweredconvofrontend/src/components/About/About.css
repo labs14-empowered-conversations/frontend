@@ -1,42 +1,33 @@
 
-html,body{
-  height:100%;
-  margin:0;
-  color:#fff;
-  text-align:center;
-}
+
+/* About CSS */
  @font-face {
   font-family: Avenir;
   src: url(../../assets/AvenirLTStd-Roman.otf);
 }
 
-header, footer{
-  width:100%;
-  height:50px;
-  line-height:50px;
-  background:#333;
+.ui.fluid.container.aboutContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4rem;
+    height: 190vh;
+    background: url(../../assets/Background_new.png) no-repeat center;
 }
 
+.ui.card.headshot {
+  margin: 2rem;
+  width: 22%;
+  margin: 0;
+}
 
-.aboutContainer2 {
-  
+.headshot-img {
+  height: 500px;
+  object-fit: contain;
   width: 100%;
-  min-height:calc(100% - 100px);
-  /* background: url(../../assets/Background_new.png) no-repeat center center fixed; */
-  background-image: url(../../assets/Background_new.png);
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-  background-size: cover;
-  background-attachment: fixed
-  /* position: fixed; */
+  /* height: 400px; */
 }
 
 
-.aboutContainer {
-  width:100%;
-  min-height:calc(100% - 100px);
-  background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1225');;
-  background-size: cover;
-  background-attachment:fixed;
-}
