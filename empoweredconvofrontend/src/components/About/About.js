@@ -9,16 +9,12 @@ export default class About extends React.Component {
     constructor(props) {
         super();
         this.state = {
-            mobileChange: false,
+            mobileChange: false
         }
     }
 
     forceUpdate = () => {
-        if(window.innerWidth >= 501) {
-          this.setState({ mobileChange: false });
-        } else if (window.innerWidth <= 499) {
-          this.setState({ mobileChange: true });
-        }
+        (window.innerWidth >= 500) ? this.setState({ mobileChange: false }) : this.setState({ mobileChange: true });
       } 
       
       resize = () => this.forceUpdate()
@@ -37,7 +33,8 @@ export default class About extends React.Component {
         <Container fluid className="aboutContainer">
             {/* <Container fluid> */}
         {!this.state.mobileChange &&
-        <Segment.Group className="wwd-container" style={{backgroundColor: "white", zIndex: "1"}} basic={true} raised fluid>
+        <div style={{ width: "100%" }}>
+        <Segment.Group className="wwd-container" style={{backgroundColor: "white", zIndex: "1", margin: "0 auto"}} basic={true} raised fluid>
                 <Segment className="wwd-header" basic={true} size={"huge"} padded={'very'} >
                 <Header as="h1" size={'huge'} >What We Do </Header>
                 </Segment>
@@ -56,11 +53,13 @@ export default class About extends React.Component {
                         </Header>
                     </Segment>
                         <Segment style={{ border: "none"}} basic={true}  floated="right" compact>
-                        <Button>Use The Tool </Button>
+                        <button className="button wwd-button">Use The Tool </button>
                         </Segment>
                         </Segment.Group>
                 </Segment.Group>
-            </Segment.Group> }
+            </Segment.Group>
+            </div>
+            }
             <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="Katherine Lorenz is a sexual assault researcher focusing on the post-assault experiences of survivors.Her work in the community involves providing social support to sexual assault and domestic violence survivors, and advocating for social change surrounding the responses to sexual assault."/>
             <Headshot url='./headShots/Grace_Davis.png' name="Grace" position="Student at Stanford" desc="Grace Davis is currently a sophomore at Stanford University. She first started working in the area of sexual violence research during her gap year. Her academic interests lie in mental health, women’s history, and sexual violence prevention."/>
             <Headshot url='./headShots/Kathryn_Holland.png' name="Kathryn" position="Assistant Professor" desc="Dr. Holland is interested in the wellbeing around issues of sexual violence and sexual health, including: the implementation, use, and effectiveness of formal support systems for sexual assault survivors, and interpersonal reactions to sexual assault disclosures" />

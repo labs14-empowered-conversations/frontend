@@ -57,6 +57,7 @@
   font-size: 1.35rem;
 }
 
+
 @media(max-width: 800px) {
   .ui.fluid.container.aboutContainer {
     height: 120rem;
@@ -67,6 +68,15 @@
   .headshot-img {
     width: 100px;
     margin-left: 16%;
+  }
+}
+
+@media(min-width: 1200px) {
+  .ui.fluid.container.aboutContainer {
+    width: 1440px;
+  }
+  .ui.card.headshot {
+    max-width: 27.5rem;
   }
 }
 
@@ -104,12 +114,14 @@
   }
 }
 
+
 @media(max-width: 600px) {
   .headshot-img {
     margin-left: 10%;
   }
 }
 
+/* Adjusts headshot-img to avoid awkward pushing of img to the right when making screen smaller. Also converts rows to 2x4 instead of 4x2 */
 @media(max-width: 520px) {
   .headshot-img {
     width: 60px;
@@ -121,12 +133,14 @@
   }
 }
 
-@media(max-width: 500px) {
+/* Adjusts container height for when WWD isn't rendered to avoid space between headshots */
+@media(max-width: 499px) {
   .ui.fluid.container.aboutContainer {
-    height: 100rem;
+    height: 103rem;
   }
 }
 
+/* Moving header closer to img and img closer to center of card */
 @media(max-width: 400px) {
   .headshot-img {
     height: 100px;
@@ -138,7 +152,10 @@
   }
 }
 
+/* WWD CSS */
+
 .ui.raised.segments.wwd-container {
+  max-width: 850px;
   height: 37.5rem;
 }
 
@@ -154,7 +171,14 @@
   font-size: 1.5rem;
 }
 
+/* Shorten WWD Container to avoid awkward whitespace. Change text padding to look better on mobile. Lower font-size.*/
 @media(max-width: 750px) {
+  .button.wwd-button {
+    width: 10rem;
+    height: 3.25rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
   .ui.raised.segments.wwd-container {
     height: 30rem;
   }
@@ -162,27 +186,6 @@
     padding: 20px 10px 0 10px;
   }
   .ui.big.basic.very.padded.segment.wwd-text h2 {
-    font-size: 1.05rem;
-  }
-}
-
-@media(max-width: 450px) {
-  .ui.raised.segments.wwd-container {
-    height: 45rem;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    border: 1px solid salmon;
-  }
-  .ui.big.basic.very.padded.segment.wwd-text {
-    width: 100%;
-    padding: 10px 5px 0 10px;
-  }
-  .ui.big.basic.very.padded.segment.wwd-text h2 {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-  .ui.huge.basic.very.padded.segment.wwd-header {
-    padding-top: 20px;
+    font-size: 1.15rem;
   }
 }
