@@ -6,25 +6,57 @@ import './About.css';
 // boom, webpack-ed
 
 
-export default function Headshot(props) {
-    return (
-        <Card className="headshot">
-            <Image className="headshot-img" style={ props.flip ? { transform: 'rotate(90deg)'} : {}} src={require(`${props.url}`)}/>
-            {/* <Image className="headshot-img" src={Grace_Davis}/> */}
-            <Card.Content>
-                <Card.Header>{props.name}</Card.Header>
-                <Card.Meta>
-                </Card.Meta>
-                <Card.Description>
-                    {props.desc}
-                </Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-                <a>
-                <Icon name='user' />
-                Social Media
-                </a>
-            </Card.Content>
-        </Card>
-    )
+export default class Headshot extends React.Component {
+    constructor(props) {
+        super();
+        this.state = {
+            mobileChange: false,
+        }
+    }
+
+    forceUpdate = () => {
+        if(window.innerWidth >= 801) {
+          this.setState({ mobileChange: false });
+        } else if (window.innerWidth <= 950) {
+          this.setState({ mobileChange: true });
+        }
+      } 
+      
+      resize = () => this.forceUpdate()
+    
+      componentDidMount() {
+        window.addEventListener('resize', this.resize)
+        this.forceUpdate();
+      }
+    
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.resize)
+      }
+
+    render() {
+        return (
+            <Card style={{ boxShadow: "none" }} className="headshot">
+                <Card.Content>
+                    <img className="headshot-img" src={require(`${this.props.url}`)}/>
+                    <Card.Header style={{ fontSize: "1.6rem" }}>{this.props.name}</Card.Header>
+                    <Card.Meta>
+                        <span style={{ fontSize: "1.2rem" }} className='date'>{this.props.position}</span>
+                    </Card.Meta>
+                    {!this.state.mobileChange &&
+                    <Card.Description className="card-desc">
+                        {this.props.desc}
+                    </Card.Description>
+                    }
+                </Card.Content>
+                {!this.state.mobileChange &&
+                <Card.Content extra>
+                    <a>
+                    <Icon name='user' />
+                    Social Media
+                    </a>
+                </Card.Content>
+                }
+            </Card>
+        )
+    }
 }
