@@ -37,7 +37,7 @@ class FormView extends React.Component {
     // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     // console.log('from submit', this.state.convoRequest.ffName);
     // console.log('from submit', this.state.convoRequest.ffPhoneNum);
-    this.props.initializeConvo(this.state.convoRequest);
+    this.props.initializeConvo({...this.state.convoRequest, school: this.state.appKey==="goblue" && "michigan"});
     // this.handleModal2Open();
     let clearedReq = {
       survivornumber: '',
@@ -316,9 +316,7 @@ class FormView extends React.Component {
         </div>
       </div>
     );
-    // return <>{!this.state.isVerified ? securityView : formView}</>;
-
-    return <>{formView}</>;
+    return <>{!this.state.isVerified ? securityView : formView}</>;
   }
 }
 

@@ -50,7 +50,7 @@ class App extends Component {
           <div>
             <Route
               exact
-              path="/ff/learn/"
+              path="/:school/learn/"
               render={props => (
                 <Video {...props} fromConvo={true} size="full" />
               )}
