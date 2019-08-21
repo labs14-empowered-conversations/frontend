@@ -5,11 +5,39 @@ import { Image, Icon, Container, Card, Responsive, Segment, Button, Header } fro
 import Headshot from './Headshot';
 
 
-export default function About(){
+export default class About extends React.Component {
+    constructor(props) {
+        super();
+        this.state = {
+            mobileChange: false,
+        }
+    }
+
+    forceUpdate = () => {
+        if(window.innerWidth >= 501) {
+          this.setState({ mobileChange: false });
+        } else if (window.innerWidth <= 499) {
+          this.setState({ mobileChange: true });
+        }
+      } 
+      
+      resize = () => this.forceUpdate()
+    
+      componentDidMount() {
+        window.addEventListener('resize', this.resize)
+        this.forceUpdate();
+      }
+    
+      componentWillUnmount() {
+        window.removeEventListener('resize', this.resize)
+      }
+
+    render() {
     return (
         <Container fluid className="aboutContainer">
             {/* <Container fluid> */}
-        <Segment.Group className="wwd-container" style={{backgroundColor: "white", zIndex: "1"}} basic={true} raised >
+        {!this.state.mobileChange &&
+        <Segment.Group className="wwd-container" style={{backgroundColor: "white", zIndex: "1"}} basic={true} raised fluid>
                 <Segment className="wwd-header" basic={true} size={"huge"} padded={'very'} >
                 <Header as="h1" size={'huge'} >What We Do </Header>
                 </Segment>
@@ -27,12 +55,12 @@ export default function About(){
                        We have cultivated a unqiue framework for how to connect with those in your life by providing the coaching, space and time needed to increase your confidence to engage in these "harder" conversations. So that you can truly show up for the people you love.
                         </Header>
                     </Segment>
-                        <Segment style={{ border: "none"}} basic={true} vertical floated="right" compact>
+                        <Segment style={{ border: "none"}} basic={true}  floated="right" compact>
                         <Button>Use The Tool </Button>
                         </Segment>
                         </Segment.Group>
                 </Segment.Group>
-            </Segment.Group>
+            </Segment.Group> }
             <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="Katherine Lorenz is a sexual assault researcher focusing on the post-assault experiences of survivors.Her work in the community involves providing social support to sexual assault and domestic violence survivors, and advocating for social change surrounding the responses to sexual assault."/>
             <Headshot url='./headShots/Grace_Davis.png' name="Grace" position="Student at Stanford" desc="Grace Davis is currently a sophomore at Stanford University. She first started working in the area of sexual violence research during her gap year. Her academic interests lie in mental health, women’s history, and sexual violence prevention."/>
             <Headshot url='./headShots/Kathryn_Holland.png' name="Kathryn" position="Assistant Professor" desc="Dr. Holland is interested in the wellbeing around issues of sexual violence and sexual health, including: the implementation, use, and effectiveness of formal support systems for sexual assault survivors, and interpersonal reactions to sexual assault disclosures" />
@@ -42,5 +70,5 @@ export default function About(){
             <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="I hate my job."/>
             <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="I hate my job." />
          </Container>
-    )
+    )}
 }
