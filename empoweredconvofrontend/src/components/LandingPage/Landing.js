@@ -61,7 +61,7 @@ export default class Landing extends React.Component {
             </> : null
           } 
           <div className="landing-float-centerpiece">
-            <div className="landing-vid-floater">Video goes here.</div>
+            <div className="landing-vid-floater"></div>
             <div className="landing-text-floater">
               { !this.state.mobileChange ? <><h3>One Conversation<br/>at a Time</h3></> : null }
               <p>

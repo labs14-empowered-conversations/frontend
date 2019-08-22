@@ -16,6 +16,8 @@ import {
 import TOS from './TOS';
 import './Form.css';
 import ReactGA from 'react-ga';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class FormView extends React.Component {
   state = {
@@ -37,7 +39,11 @@ class FormView extends React.Component {
     // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     // console.log('from submit', this.state.convoRequest.ffName);
     // console.log('from submit', this.state.convoRequest.ffPhoneNum);
-    this.props.initializeConvo({...this.state.convoRequest, school: this.state.appKey==="goblue" && "michigan"});
+    this.props.initializeConvo({...this.state.convoRequest, school: this.state.appKey==="goblue" && "michigan"})
+    .then(() => toast("Conversation started successfully!", {
+      type: "success",
+      className: "toast"
+    }));
     // this.handleModal2Open();
     let clearedReq = {
       survivornumber: '',
@@ -131,6 +137,7 @@ class FormView extends React.Component {
     );
     let formView = (
       <div className="stage">
+        <ToastContainer />
         <div className="stage-left">
           <div className="stage-title">
             <h1>Almost there . . .</h1>

@@ -249,3 +249,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+.toast {
+  background: #8FEDC2 !important;
+  font-size: 1.3rem !important;
+}
