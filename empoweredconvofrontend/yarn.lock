@@ -8194,7 +8194,7 @@ react-dev-utils@^9.0.3:
     strip-ansi "5.2.0"
     text-table "0.2.0"
 
-react-dom@^16.9.0:
+react-dom@^16.3.1, react-dom@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.9.0.tgz#5e65527a5e26f22ae3701131bcccaee9fb0d3962"
   integrity sha512-YFT2rxO9hM70ewk9jq0y6sQk8cL02xm4+IzYBz75CQGlClQQ1Bxq0nhHF6OtSbit+AIahujJgb/CPRibFkMNJQ==
@@ -8218,6 +8218,14 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
+
+react-konami-code@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/react-konami-code/-/react-konami-code-1.4.0.tgz#5b6508bcc57e91a02f696451c11f0873caaa8dce"
+  integrity sha512-kdPDfPNcNpYQzKiBy2NAYLYQuzUmxYqEEmGJcK4I1I4jCgIFthACEdkWPBQOFD1R8DBP8pLZAgdkMm3WpDjo9Q==
+  dependencies:
+    react "^16.3.1"
+    react-dom "^16.3.1"
 
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
@@ -8256,6 +8264,14 @@ react-redux@^7.1.0:
     loose-envify "^1.4.0"
     prop-types "^15.7.2"
     react-is "^16.8.6"
+
+react-rellax@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-rellax/-/react-rellax-1.0.3.tgz#43e8f41bcbab8eabf9a2c720a48382258ab38820"
+  integrity sha512-njrc/VpQMPmzLVBdwwhIKEXXeYbPog94Fv8TKbhTnIG8x97Df6ZATRWQJs2WVvMY4SXhjQ5j8vE93dlur7HsKw==
+  dependencies:
+    prop-types "^15.6.1"
+    rellax "^1.9.1"
 
 react-router-dom@^5.0.1:
   version "5.0.1"
@@ -8367,7 +8383,7 @@ react-transition-group@^2.6.1:
     prop-types "^15.6.2"
     react-lifecycles-compat "^3.0.4"
 
-react@^16.9.0:
+react@^16.3.1, react@^16.9.0:
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.9.0.tgz#40ba2f9af13bc1a38d75dbf2f4359a5185c4f7aa"
   integrity sha512-+7LQnFBwkiw+BobzOF6N//BdoNw0ouwmSJTEm9cglOOmsg/TMiFHZLe2sEoN5M7LgJTj9oHH0gxklfnQe66S1w==
@@ -8560,6 +8576,11 @@ relateurl@0.2.x:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+rellax@^1.9.1:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/rellax/-/rellax-1.10.0.tgz#0308b813b458f9175d37ffb4272e1f616eab1341"
+  integrity sha512-BtxD9b8cAQcTs6iat1fqKvHMjIZ8CaxjsC5U/cIIVHC4LjkIsr0ZmeqxUm5ZvBvyjLwfPbU8Wcryp77sR5C8QA==
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"

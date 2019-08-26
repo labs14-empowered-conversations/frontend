@@ -47,6 +47,7 @@ class App extends Component {
               )}
             />
           </div>
+          {}
           <div>
             <Route
               exact
@@ -67,3 +68,6 @@ export default connect(
   null,
   { register, login },
 )(App);
+
+
+

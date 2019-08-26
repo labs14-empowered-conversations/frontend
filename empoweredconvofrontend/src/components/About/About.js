@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import './About.css';
 import { Image, Icon, Container, Card, Responsive, Segment, Button, Header } from 'semantic-ui-react';
 import Headshot from './Headshot';
+import Parallax from 'react-rellax'
 
 
 export default class About extends React.Component {
@@ -34,6 +35,7 @@ export default class About extends React.Component {
             {/* <Container fluid> */}
         {!this.state.mobileChange &&
         <div style={{ width: "100%" }}>
+    <Parallax  speed={3} centered vertical={false} horizontal={true}>      
         <Segment.Group className="wwd-container" style={{backgroundColor: "white", zIndex: "1", margin: "0 auto"}} basic={true} raised fluid>
                 <Segment className="wwd-header" basic={true} size={"huge"} padded={'very'} >
                 <Header as="h1" size={'huge'} >What We Do </Header>
@@ -58,6 +60,7 @@ export default class About extends React.Component {
                         </Segment.Group>
                 </Segment.Group>
             </Segment.Group>
+            </Parallax>  
             </div>
             }
             <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="Katherine Lorenz is a sexual assault researcher focusing on the post-assault experiences of survivors.Her work in the community involves providing social support to sexual assault and domestic violence survivors, and advocating for social change surrounding the responses to sexual assault."/>
@@ -66,8 +69,8 @@ export default class About extends React.Component {
             <Headshot url='./headShots/Louisa_Kornblatt.png' name="Louisa" position="Clinical Social Worker" desc="Louisa Kornblatt is an associate clinical social worker at an adolescent psychiatric hospital in the Bay Area and PhD student in Social Welfare at University of California, Berkeley. She is currently involved in qualitative research examining the perspectives of emergency department providers on responding to domestic violence."/>
             <Headshot url='./headShots/Sarah_Lime.png' name="Sarah" position="University of Michigan" desc="Sarah Lime is the current Director of Community Outreach and Activism for PPE, a role responsible for coordinating and hosting the annual Panhellenic Speak Out. In the future I hope to continue combining my interests in International and Women's Studies and develop research on sex, gender, and sexuality."/>
             <Headshot url='./headShots/elena.png' name="Elena" position="Founder/CEO" desc="Elena is driven by human connection. She is excited to announce the upcoming launch of her company, Empowered Conversation, a tool re-envisioning the future of social support by changing the way we have hard conversations."/>
-            <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="I hate my job."/>
-            <Headshot url='./headShots/katherine.png' name="Katherine" position="Assistant Professor" desc="I hate my job." />
+            <Headshot url='./headShots/katherine.png' name="KatherineV2" position="Professor" desc="Nam massa tortor, pellentesque ac arcu ac, efficitur laoreet metus. Aliquam dapibus tempus lectus mattis sollicitudin. Sed placerat aliquet dui, id tristique nunc hendrerit vel. Nunc quis libero augue. Ultrices quis lectus ac, congue porttitor ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra."/>
+            <Headshot url='./headShots/katherine.png' name="KatherineV3" position="Super Duper Lead Professor" desc="Donec malesuada dolor id risus convallis efficitur. Donec velit ipsum, pharetra sed sodales et, feugiat quis est. Quisque porta ante leo pretium augue, vitae interdum turpis orci vitae lacus. Aliquam fermentum tempor sem, mattis volutpat nulla commodo vitae. Cras tellus lacus, feugiat nec turpis in, consequat maximus diam." />
          </Container>
     )}
 }
