@@ -47,10 +47,11 @@ class App extends Component {
               )}
             />
           </div>
+          {}
           <div>
             <Route
               exact
-              path="/ff/learn/"
+              path="/:school/learn/"
               render={props => (
                 <Video {...props} fromConvo={true} size="full" />
               )}
@@ -67,3 +68,6 @@ export default connect(
   null,
   { register, login },
 )(App);
+
+
+

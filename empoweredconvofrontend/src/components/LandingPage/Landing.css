@@ -284,8 +284,7 @@ button {
   align-items: center;
   z-index: 5;
   color: #ffffff;
-  background-color: #2e2f38;
-  box-shadow: 8px 12px 12px rgba(0, 0, 0, 0.2);
+  background: url(../../assets/video.png) no-repeat center;
 }
 
 

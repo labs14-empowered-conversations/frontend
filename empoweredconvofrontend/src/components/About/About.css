@@ -1,42 +1,191 @@
 
-html,body{
-  height:100%;
-  margin:0;
-  color:#fff;
-  text-align:center;
-}
+
+/* About CSS */
  @font-face {
   font-family: Avenir;
   src: url(../../assets/AvenirLTStd-Roman.otf);
 }
 
-header, footer{
-  width:100%;
-  height:50px;
-  line-height:50px;
-  background:#333;
+.ui.fluid.container.aboutContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4rem;
+    height: 190rem;
+    background: url(../../assets/Background_new.png) no-repeat center;
+}
+
+.ui.card.headshot {
+  border-radius: 3%;
+  background-color: #E1FFF1;
+  font-family: Avenir;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 42rem;
+  line-height: 1.75;
+  width: 22%;
+  margin: 0 1rem;
+}
+
+@media(max-width: 1160px) {
+  .ui.card.headshot {
+    width: 24.3%;
+    margin: 0.03rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .ui.card.headshot {
+    line-height: 1.5;
+  }
+}
+
+.headshot-img {
+  margin-left: 24%;
+  z-index: 1;
+  margin-top: -8rem;
+  margin-bottom: 1rem;
+  height: 132px;
+  width: 125px;
+  object-fit: contain;
+}
+
+.description.card-desc {
+  font-size: 1.35rem;
 }
 
 
-.aboutContainer2 {
+@media(max-width: 800px) {
+  .ui.fluid.container.aboutContainer {
+    height: 120rem;
+  }
+  .ui.card.headshot {
+    height: 15rem; 
+  }
+  .headshot-img {
+    width: 100px;
+    margin-left: 16%;
+  }
+}
+
+@media(min-width: 1200px) {
+  .ui.fluid.container.aboutContainer {
+    width: 1440px;
+  }
+  .ui.card.headshot {
+    max-width: 27.5rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .headshot-img {
+    margin-left: 17.5%;
+  }
   
-  width: 100%;
-  min-height:calc(100% - 100px);
-  /* background: url(../../assets/Background_new.png) no-repeat center center fixed; */
-  background-image: url(../../assets/Background_new.png);
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-  background-size: cover;
-  background-attachment: fixed
-  /* position: fixed; */
+  .description.card-desc {
+    font-size: 1.00rem;
+  }
+}
+
+.ui.card.headshot.content.header {
+  font-size: 1.6rem;
 }
 
 
-.aboutContainer {
-  width:100%;
-  min-height:calc(100% - 100px);
-  background-image: url('https://images.unsplash.com/photo-1446080501695-8e929f879f2b?fit=crop&fm=jpg&h=725&ixjsv=2.0.0&ixlib=rb-0.3.5&q=80&w=1225');;
-  background-size: cover;
-  background-attachment:fixed;
+@media(max-width: 750px) {
+  .headshot-img {
+    margin-left: 10%;
+  }
+}
+
+@media(max-width: 725px) {
+  .ui.fluid.container.aboutContainer {
+    height: 150rem;
+  }
+  .ui.card.headshot {
+    margin: 0 8%;
+  }
+  .headshot-img {
+    margin-left: 16%;
+    width: 75px;
+  }
+}
+
+
+@media(max-width: 600px) {
+  .headshot-img {
+    margin-left: 10%;
+  }
+}
+
+/* Adjusts headshot-img to avoid awkward pushing of img to the right when making screen smaller. Also converts rows to 2x4 instead of 4x2 */
+@media(max-width: 520px) {
+  .headshot-img {
+    width: 60px;
+    margin-left: 25%;
+  }
+  .ui.card.headshot {
+    width: 40%;
+    margin: 0 4%;
+  }
+}
+
+/* Adjusts container height for when WWD isn't rendered to avoid space between headshots */
+@media(max-width: 499px) {
+  .ui.fluid.container.aboutContainer {
+    height: 103rem;
+  }
+}
+
+/* Moving header closer to img and img closer to center of card */
+@media(max-width: 400px) {
+  .headshot-img {
+    height: 100px;
+    margin-top: -6rem;
+    margin-left: 20%;
+  }
+  .ui.card.headshot {
+    height: 15rem;
+  }
+}
+
+/* WWD CSS */
+
+.ui.raised.segments.wwd-container {
+  max-width: 850px;
+  height: 37.5rem;
+}
+
+.ui.huge.basic.very.padded.segment.wwd-header {
+  padding-bottom: 0;
+}
+
+.ui.big.basic.very.padded.segment.wwd-text {
+  padding: 40px 30px 0 30px;
+}
+
+.ui.big.basic.very.padded.segment.wwd-text h2 {
+  font-size: 1.5rem;
+}
+
+/* Shorten WWD Container to avoid awkward whitespace. Change text padding to look better on mobile. Lower font-size.*/
+@media(max-width: 750px) {
+  .button.wwd-button {
+    width: 10rem;
+    height: 3.25rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  .ui.raised.segments.wwd-container {
+    height: 30rem;
+  }
+  .ui.big.basic.very.padded.segment.wwd-text {
+    padding: 20px 10px 0 10px;
+  }
+  .ui.big.basic.very.padded.segment.wwd-text h2 {
+    font-size: 1.15rem;
+  }
 }

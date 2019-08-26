@@ -30,18 +30,20 @@ const Video = props => {
   };
 
   return (
-    <div className={'video-' + props.size}>
-      <YouTubePlayer
-        className="video"
-        url="https://www.youtube.com/watch?v=bBrgb-uLtlE"
-        controls={true}
-        onProgress={finishConvo}
-        config={{
-          youtube: {
-            playerVars: { modestbranding: 1 },
-          },
-        }}
-      />
+    <div className="videoBackground">
+      <div className={'video-' + props.size}>
+        <YouTubePlayer
+          className="video"
+          url="https://www.youtube.com/watch?v=bBrgb-uLtlE"
+          controls={true}
+          onProgress={finishConvo}
+          config={{
+            youtube: {
+              playerVars: { modestbranding: 1 },
+            },
+          }}
+        />
+      </div>
     </div>
   );
 };

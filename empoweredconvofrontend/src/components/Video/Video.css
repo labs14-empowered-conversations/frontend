@@ -6,6 +6,12 @@
     align-items: center;
 }
 
+.videoBackground{
+    background-color: #8FEDC2;
+    margin: 6rem 0;
+    /* #24B4A5 */
+}
+
 @media(max-width: 769px) {
     .video-full {
         width: 440px;
