@@ -39,11 +39,17 @@ class FormView extends React.Component {
     // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     // console.log('from submit', this.state.convoRequest.ffName);
     // console.log('from submit', this.state.convoRequest.ffPhoneNum);
-    this.props.initializeConvo({...this.state.convoRequest, school: this.state.appKey==="goblue" && "michigan"})
-    .then(() => toast("Conversation started successfully!", {
-      type: "success",
-      className: "toast"
-    }));
+    this.props
+      .initializeConvo({
+        ...this.state.convoRequest,
+        school: this.state.appKey === 'goblue' && 'michigan',
+      })
+      .then(() =>
+        toast('Conversation started successfully!', {
+          type: 'success',
+          className: 'toast',
+        }),
+      );
     // this.handleModal2Open();
     let clearedReq = {
       survivornumber: '',
@@ -82,7 +88,7 @@ class FormView extends React.Component {
   };
 
   submitKey = e => {
-    let keys = 'goblue';
+    let keys = ['goblue', 'gocats'];
     keys.includes(this.state.appKey)
       ? (function(env) {
           env.setState({ isVerifying: true });
@@ -150,7 +156,10 @@ class FormView extends React.Component {
           <Segment className="float-box">
             <Container className="content-box">
               {/* <Form onValidSubmit={() => this.submitHandler()} size={"huge"}> */}
-              <Form onValidSubmit={() => this.handleModal2Open()} size={'large'}>
+              <Form
+                onValidSubmit={() => this.handleModal2Open()}
+                size={'large'}
+              >
                 <Grid columns={1} className="tablet mobile only">
                   <Grid.Column>
                     <div className="text-box">
