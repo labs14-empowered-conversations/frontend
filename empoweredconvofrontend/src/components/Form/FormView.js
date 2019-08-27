@@ -39,10 +39,13 @@ class FormView extends React.Component {
     // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     // console.log('from submit', this.state.convoRequest.ffName);
     // console.log('from submit', this.state.convoRequest.ffPhoneNum);
+
     this.props
       .initializeConvo({
         ...this.state.convoRequest,
-        school: this.state.appKey === 'goblue' && 'michigan',
+        school:
+          (this.state.appKey === 'goblue' && 'michigan') ||
+          (this.state.appKey === 'gocats' && 'northwestern'),
       })
       .then(() =>
         toast('Conversation started successfully!', {
