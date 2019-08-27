@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Landing.css';
 import { Responsive } from 'semantic-ui-react';
+import Parallax from 'react-rellax';
 
 export default class Landing extends React.Component {
   state = {
@@ -30,27 +31,30 @@ export default class Landing extends React.Component {
     console.log(this.state.mobileChange, 'mobile changed');
     return (
       <div className="landing-stage">
-        <div className="landing-stage-left">
-          <div className="landing-stage-title">
-            <h5>Today I am . . .</h5>
-            <h1>
-              <span>EM</span>
-              <span style={{ color: '#24b4a5' }}>POWER</span>
-              <span>ED</span>
-            </h1>
-            <h4>When words matter most.</h4>
-            <p>
-              A survivor-activated tool that educates and prepares the person
-              they will disclose to before the conversation takes place.
-            </p>
-            <div className="landing-button-box">
-              <Link to="/learn">
-                <button className="landingBtn">Explore</button>
-              </Link>
+        <Parallax speed={3} centered vertical={false} horizontal={true}>
+          <div className="landing-stage-left">
+            <div className="landing-stage-title">
+              <h5>Today I am . . .</h5>
+              <h1>
+                <span>EM</span>
+                <span style={{ color: '#24b4a5' }}>POWER</span>
+                <span>ED</span>
+              </h1>
+              <h4>When words matter most.</h4>
+              <p>
+                A survivor-activated tool that educates and prepares the person
+                they will disclose to before the conversation takes place.
+              </p>
+              <div className="landing-button-box">
+                <Link to="/learn">
+                  <button className="landingBtn">Explore</button>
+                </Link>
+              </div>
             </div>
+            {/* <div className="landing-lime-card" /> */}
           </div>
-          {/* <div className="landing-lime-card" /> */}
-        </div>
+        </Parallax>
+
         {/* <div className="landing-stage-plane">
           <div className="landing-stage-trap" />
         </div> */}
