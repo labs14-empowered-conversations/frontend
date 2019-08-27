@@ -172,7 +172,7 @@ export default class About extends React.Component {
         <Headshot
           url="./headShots/katherine.png"
           name="KatherineV3"
-          position="Super Duper Lead Professor"
+          position="Lead Professor"
           desc="Donec malesuada dolor id risus convallis efficitur. Donec velit ipsum, pharetra sed sodales et, feugiat quis est. Quisque porta ante leo pretium augue, vitae interdum turpis orci vitae lacus. Aliquam fermentum tempor sem, mattis volutpat nulla commodo vitae. Cras tellus lacus, feugiat nec turpis in, consequat maximus diam."
         />
       </Container>
