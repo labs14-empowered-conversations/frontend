@@ -1,135 +1,191 @@
-@font-face {
+
+
+/* About CSS */
+ @font-face {
   font-family: Avenir;
-  src: url(../../assets/AvenirLTStd-Book.otf);
+  src: url(../../assets/AvenirLTStd-Roman.otf);
 }
 
-.about-page{
-    /*border:solid blue;*/
-    margin:auto;
-   /* src: "assets/Background new.png";*/
-    height: 1918px;	width: 1440px;
-   /*padding-top:130px;*/
-   display:flex;
-   flex-direction: column;
+.ui.fluid.container.aboutContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 4rem;
+    height: 190rem;
+    background: url(../../assets/Background_new.png) no-repeat center;
+}
+
+.ui.card.headshot {
+  border-radius: 3%;
+  background-color: #E1FFF1;
+  font-family: Avenir;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 42rem;
+  line-height: 1.75;
+  width: 22%;
+  margin: 0 1rem;
+}
+
+@media(max-width: 1160px) {
+  .ui.card.headshot {
+    width: 24.3%;
+    margin: 0.03rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .ui.card.headshot {
+    line-height: 1.5;
+  }
+}
+
+.headshot-img {
+  margin-left: 24%;
+  z-index: 1;
+  margin-top: -8rem;
+  margin-bottom: 1rem;
+  height: 132px;
+  width: 125px;
+  object-fit: contain;
+}
+
+.description.card-desc {
+  font-size: 1.35rem;
 }
 
 
-
-@media (max-width:500px){
-    .about-page{
-        height: 1930px;	width: 100%;
-       /* border:solid red;*/
-    }
-
-
+@media(max-width: 800px) {
+  .ui.fluid.container.aboutContainer {
+    height: 120rem;
+  }
+  .ui.card.headshot {
+    height: 15rem; 
+  }
+  .headshot-img {
+    width: 100px;
+    margin-left: 16%;
+  }
 }
 
-.about-text{
-  /* border:solid pink;*/
-    display:flex;
-    flex-direction: column;
-    padding-left:18%;
-    position: relative;
-    top:205px;
+@media(min-width: 1200px) {
+  .ui.fluid.container.aboutContainer {
+    width: 1440px;
+  }
+  .ui.card.headshot {
+    max-width: 27.5rem;
+  }
+}
+
+@media(max-width: 1000px) {
+  .headshot-img {
+    margin-left: 17.5%;
+  }
   
+  .description.card-desc {
+    font-size: 1.00rem;
+  }
 }
 
-@media (max-width:500px){
-    .about-text{
-       padding:0px;
-       width:100%;
-    }
-
-
-}
-
-
-#who{
-  /*  border:solid red;*/
-   /* margin-left:25%;*/
-
-   /* height: 55px;*/	width: 276px;	color: #2E2F38;	font-family: Avenir;	font-size: 40px;	font-weight: 500;	line-height: 55px;
+.ui.card.headshot.content.header {
+  font-size: 1.6rem;
 }
 
 
-
-#A{
-    /*border:solid red;*/
-    text-align: left;
-    /*margin-left:25%;*/
-    margin-top:15px;
-
-
-  /* height: 81px;*/	width: 474px;	color: #2E2F38;	font-family: Avenir;	font-size: 20px;	font-weight: 300;	line-height: 27px;
-
-}
-#our{
-   /* border:solid red;*/
-    text-align: left;
-    margin-top:15px;
-
-    /*margin-left:25%;*/
-
-
-
-   /* height: 108px;*/	width: 474px;	color: #2E2F38;	font-family: Avenir;	font-size: 20px;	font-weight: 300;	line-height: 27px;
-
+@media(max-width: 750px) {
+  .headshot-img {
+    margin-left: 10%;
+  }
 }
 
-@media (max-width:500px){
-   #who{
-       
-        /*border:solid blue;*/
-        padding-left:25px;
-        margin-left:10px;
-    
-     }
-    #A{
-       width:90%;
-      /* border:solid blue;*/
-       padding-left:15px;
-       margin:auto;
-    }
-    #our{
-        width:90%;
-        /*border:solid blue;*/
-        padding-left:15px;
-        margin:auto;
-        margin-top:15px;
-
-    }
-
-
+@media(max-width: 725px) {
+  .ui.fluid.container.aboutContainer {
+    height: 150rem;
+  }
+  .ui.card.headshot {
+    margin: 0 8%;
+  }
+  .headshot-img {
+    margin-left: 16%;
+    width: 75px;
+  }
 }
 
-.aboutbtn{
-    /*border:solid red;*/
-    cursor: pointer;
-    margin-left:23%;
-    height: 25px;	width: 107.34px;	color: #FFFFFF;	font-family: Avenir;	  font-size: 20px;
-	font-weight: 500;	line-height: 25px;
-    height: 49px;	width: 163px; border:1px solid;	border-radius: 5px;	background-color: #2E2F38;	box-shadow: 0 15px 20px -10px;
-}
-.aboutbtn:hover{
-    color: #24B4A5;
 
+@media(max-width: 600px) {
+  .headshot-img {
+    margin-left: 10%;
+  }
 }
 
-@media (max-width:500px){
-    .aboutbtn{
-        margin-left:50%;
-        margin-top:15px;
-
-
-    }
-
-
+/* Adjusts headshot-img to avoid awkward pushing of img to the right when making screen smaller. Also converts rows to 2x4 instead of 4x2 */
+@media(max-width: 520px) {
+  .headshot-img {
+    width: 60px;
+    margin-left: 25%;
+  }
+  .ui.card.headshot {
+    width: 40%;
+    margin: 0 4%;
+  }
 }
 
-.aboutfooter{
-   /* border:solid red;*/
-    position: relative;
-    top:1479px;
-    
-    
+/* Adjusts container height for when WWD isn't rendered to avoid space between headshots */
+@media(max-width: 499px) {
+  .ui.fluid.container.aboutContainer {
+    height: 103rem;
+  }
+}
+
+/* Moving header closer to img and img closer to center of card */
+@media(max-width: 400px) {
+  .headshot-img {
+    height: 100px;
+    margin-top: -6rem;
+    margin-left: 20%;
+  }
+  .ui.card.headshot {
+    height: 15rem;
+  }
+}
+
+/* WWD CSS */
+
+.ui.raised.segments.wwd-container {
+  max-width: 850px;
+  height: 37.5rem;
+}
+
+.ui.huge.basic.very.padded.segment.wwd-header {
+  padding-bottom: 0;
+}
+
+.ui.big.basic.very.padded.segment.wwd-text {
+  padding: 40px 30px 0 30px;
+}
+
+.ui.big.basic.very.padded.segment.wwd-text h2 {
+  font-size: 1.5rem;
+}
+
+/* Shorten WWD Container to avoid awkward whitespace. Change text padding to look better on mobile. Lower font-size.*/
+@media(max-width: 750px) {
+  .button.wwd-button {
+    width: 10rem;
+    height: 3.25rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+  }
+  .ui.raised.segments.wwd-container {
+    height: 30rem;
+  }
+  .ui.big.basic.very.padded.segment.wwd-text {
+    padding: 20px 10px 0 10px;
+  }
+  .ui.big.basic.very.padded.segment.wwd-text h2 {
+    font-size: 1.15rem;
+  }
 }

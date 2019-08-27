@@ -1,15 +1,27 @@
 .video-full {
-    height: 450px;
+  height: 450px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoBackground {
+  background-color: #8fedc2;
+  margin: 6rem 0;
+  /* #24B4A5 */
+}
+
+@media (max-width: 769px) {
+  .video-full {
+    width: 440px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .video-full {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin: 0 auto;
+  }
 }
-
-@media(max-width: 769px) {
-    .video-full {
-        width: 440px;
-        margin: 0 auto;
-    }
-}
-

@@ -27,36 +27,40 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Nav />
-        <>
-          <div className="App">
-            <Route exact path="/form" component={FormView} />
-          </div>
-          <div className="App-Landing">
-            <Route exact path="/" component={Landing} />
-          </div>
-          <div className="App-About">
-            <Route exact path="/about" component={About} />
-          </div>
-          <div>
-            <Route
-              exact
-              path="/learn"
-              render={props => (
-                <Video {...props} fromConvo={false} size="full" />
-              )}
-            />
-          </div>
-          <div>
-            <Route
-              exact
-              path="/ff/learn/"
-              render={props => (
-                <Video {...props} fromConvo={true} size="full" />
-              )}
-            />
-          </div>
-        </>
+        {/* <Nav /> */}
+        <div id="outer-container">
+          <Route path="/" component={Nav} />
+          <main id="page-wrap">
+            <div className="App">
+              <Route exact path="/form" component={FormView} />
+            </div>
+            <div className="App-Landing">
+              <Route exact path="/" component={Landing} />
+            </div>
+            <div className="App-About">
+              <Route exact path="/about" component={About} />
+            </div>
+            <div>
+              <Route
+                exact
+                path="/learn"
+                render={props => (
+                  <Video {...props} fromConvo={false} size="full" />
+                )}
+              />
+            </div>
+            {}
+            <div>
+              <Route
+                exact
+                path="/:school/learn/"
+                render={props => (
+                  <Video {...props} fromConvo={true} size="full" />
+                )}
+              />
+            </div>
+          </main>
+        </div>
         <Footer />
       </Router>
     );

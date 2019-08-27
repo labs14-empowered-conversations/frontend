@@ -4,6 +4,7 @@ import { initializeConvo } from '../../actions/initConvoActions';
 import { Form, Checkbox } from 'formsy-semantic-ui-react';
 import {
   Button,
+  Header,
   Container,
   Modal,
   Segment,
@@ -15,6 +16,8 @@ import {
 import TOS from './TOS';
 import './Form.css';
 import ReactGA from 'react-ga';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 class FormView extends React.Component {
   state = {
@@ -27,6 +30,7 @@ class FormView extends React.Component {
     isModal2Open: false,
     isVerified: false,
     isVerifying: false,
+    columns: 1,
     appKey: '',
   };
 
@@ -35,7 +39,17 @@ class FormView extends React.Component {
     // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     // console.log('from submit', this.state.convoRequest.ffName);
     // console.log('from submit', this.state.convoRequest.ffPhoneNum);
-    this.props.initializeConvo(this.state.convoRequest);
+    this.props
+      .initializeConvo({
+        ...this.state.convoRequest,
+        school: this.state.appKey === 'goblue' && 'michigan',
+      })
+      .then(() =>
+        toast('Conversation started successfully!', {
+          type: 'success',
+          className: 'toast',
+        }),
+      );
     // this.handleModal2Open();
     let clearedReq = {
       survivornumber: '',
@@ -74,7 +88,7 @@ class FormView extends React.Component {
   };
 
   submitKey = e => {
-    let keys = ['northwestern', 'stanford', 'michigan'];
+    let keys = ['goblue', 'gocats'];
     keys.includes(this.state.appKey)
       ? (function(env) {
           env.setState({ isVerifying: true });
@@ -129,6 +143,7 @@ class FormView extends React.Component {
     );
     let formView = (
       <div className="stage">
+        <ToastContainer />
         <div className="stage-left">
           <div className="stage-title">
             <h1>Almost there . . .</h1>
@@ -139,29 +154,65 @@ class FormView extends React.Component {
         </div>
         <div className="float-plane">
           <Segment className="float-box">
-            <Container className="modal-box">
-              <Modal
-                trigger={
-                  <Button
-                    size="huge"
-                    style={{ backgroundColor: '#2E2F38', color: 'white' }}
-                    content={'Terms of Service'}
-                    onClick={this.handleModal1Open}
-                  />
-                }
-                open={this.state.isModalOpen}
-                onClose={this.handleModalOpen}
-              >
-                <Modal.Header>Terms of Service</Modal.Header>
-                <Modal.Content>
-                  <TOS />
-                </Modal.Content>
-              </Modal>
-            </Container>
             <Container className="content-box">
               {/* <Form onValidSubmit={() => this.submitHandler()} size={"huge"}> */}
-              <Form onValidSubmit={() => this.handleModal2Open()} size={'huge'}>
-                <Grid columns={2} divided>
+              <Form
+                onValidSubmit={() => this.handleModal2Open()}
+                size={'large'}
+              >
+                <Grid columns={1} className="tablet mobile only">
+                  <Grid.Column>
+                    <div className="text-box">
+                      <h5>Your Information</h5>
+                      <p>
+                        Don't worry! We'll keep you anonymous, no matter what!
+                        We just need your cell phone number to give you an
+                        update when the recipient gets the text.
+                      </p>
+                    </div>
+                    <Form.Group grouped>
+                      <Form.Input
+                        name="survivornumber"
+                        label="Your Phone Number "
+                        validations="isNumeric"
+                        value={this.state.convoRequest.survivornumber}
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                    </Form.Group>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <div className="text-box">
+                      <h5>Recipient's Information</h5>
+                      <p>
+                        This person will receive the text that informs them that
+                        someone in their life wants to have a hard conversation.
+                      </p>
+                    </div>
+                    <Form.Group grouped>
+                      <Form.Input
+                        name="ffname"
+                        label="Recipient's Name "
+                        validations="isWords"
+                        value={this.state.convoRequest.ffname}
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                      <Form.Input
+                        name="ffnumber"
+                        label="Recipient's Phone Number "
+                        validations="isNumeric"
+                        value={this.state.convoRequest.ffnumber}
+                        required
+                        onChange={e => this.changeHandler(e)}
+                        fluid
+                      />
+                    </Form.Group>
+                  </Grid.Column>
+                </Grid>
+                <Grid columns={2} divided className="computer only">
                   <Grid.Column>
                     <div className="text-box">
                       <h5>Your Information</h5>
@@ -215,10 +266,28 @@ class FormView extends React.Component {
                 </Grid>
                 <Container className="agree-submit">
                   <Checkbox
+                    className="termsCheckbox"
                     name="survivorLiability"
                     label={
                       <label className="agree-checktext">
-                        I accept the Terms of Service
+                        I accept the
+                        <Modal
+                          trigger={
+                            <Header
+                              as="h3"
+                              color="#2E2F38"
+                              content={'Terms of Service'}
+                              onClick={this.handleModal1Open}
+                            />
+                          }
+                          open={this.state.isModalOpen}
+                          onClose={this.handleModalOpen}
+                        >
+                          <Modal.Header>Terms of Service</Modal.Header>
+                          <Modal.Content>
+                            <TOS />
+                          </Modal.Content>
+                        </Modal>
                       </label>
                     }
                     validations="isTrue"
