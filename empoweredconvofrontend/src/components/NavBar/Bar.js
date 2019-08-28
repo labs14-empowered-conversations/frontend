@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import EmLogo from '../../assets/Medium/EmpoweredConversation-Logo-Md-RGB.png';
+// import EmLogo from '../../assets/Medium/EmpoweredConversation-Logo-Md-RGB.png';
 import './Bar.css';
 import ctaBtn from './use_the_tool_btn.png';
 import Hamburger from './Hamburger';
@@ -13,7 +13,7 @@ export default function Bar() {
           <Link to="/">
             <img
               className="nav-logo"
-              src={EmLogo}
+              src={''}
               alt="Empowered Conversations clickable logo; returns to homepage."
             />
           </Link>
