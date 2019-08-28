@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import componentUpdate from 'redux-state-manage';
 import './Landing.css';
 import { Responsive } from 'semantic-ui-react';
 import Parallax from 'react-rellax';
@@ -19,16 +20,17 @@ export default class Landing extends React.Component {
   resize = () => this.forceUpdate();
 
   componentDidMount() {
+    componentUpdate.setState();
     window.addEventListener('resize', this.resize);
     this.forceUpdate();
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.resize);
+    componentUpdate.setState();
   }
 
   render() {
-    console.log(this.state.mobileChange, 'mobile changed');
     return (
       <div className="landing-stage">
         <Parallax speed={3} centered vertical={false} horizontal={true}>

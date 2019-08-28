@@ -1,6 +1,6 @@
 import React from 'react';
+import componentUpdate from 'redux-state-manage';
 import YouTubePlayer from 'react-player/lib/players/YouTube';
-
 import axios from 'axios';
 import './Video.css';
 

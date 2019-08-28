@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import componentUpdate from 'redux-state-manage';
 import { initializeConvo } from '../../actions/initConvoActions';
 import { Form, Checkbox } from 'formsy-semantic-ui-react';
 import {
@@ -34,7 +35,12 @@ class FormView extends React.Component {
     appKey: '',
   };
 
+  componentDidMount() {
+    componentUpdate.setState();
+  }
+
   submitHandler = e => {
+    componentUpdate.setState(this.state);
     // console.log('send text button hit');
     // console.log('from submit', this.state.convoRequest.survivorPhoneNum);
     // console.log('from submit', this.state.convoRequest.ffName);

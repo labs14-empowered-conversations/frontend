@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import componentUpdate from 'redux-state-manage';
 import { login, register } from './actions/authActions';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -23,6 +24,10 @@ class App extends Component {
       password: 'password',
     },
   };
+
+  componentDidMount() {
+    componentUpdate.setState();
+  }
 
   render() {
     return (

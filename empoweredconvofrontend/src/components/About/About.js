@@ -11,6 +11,7 @@ import {
   Button,
   Header,
 } from 'semantic-ui-react';
+import componentUpdate from 'redux-state-manage';
 import Headshot from './Headshot';
 import Parallax from 'react-rellax';
 
@@ -31,11 +32,13 @@ export default class About extends React.Component {
   resize = () => this.forceUpdate();
 
   componentDidMount() {
+    componentUpdate.setState();
     window.addEventListener('resize', this.resize);
     this.forceUpdate();
   }
 
   componentWillUnmount() {
+    componentUpdate.setState();
     window.removeEventListener('resize', this.resize);
   }
 
