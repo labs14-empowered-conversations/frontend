@@ -8553,6 +8553,11 @@ redux-logger@^3.0.6:
   dependencies:
     deep-diff "^0.3.5"
 
+redux-state-manage@^3.0.1:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/redux-state-manage/-/redux-state-manage-3.0.1.tgz#8c5d32283ac2ab917bb698be007b17bbae42607d"
+  integrity sha512-yAVW+WD759mDPqT88CZOqpGBM+/Lkgh4etRd7kJnGqgdS9Y5crG3IFzeM/uZOy6AdyvTn9XmRAnDzFVJlKsdbQ==
+
 redux-thunk@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/redux-thunk/-/redux-thunk-2.3.0.tgz#51c2c19a185ed5187aaa9a2d08b666d0d6467622"
