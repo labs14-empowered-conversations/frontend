@@ -67,7 +67,7 @@ export default class About extends React.Component {
                   padded={'very'}
                 >
                   <Header as="h1" size={'huge'}>
-                    What We Do{' '}
+                    What LOREM we IPSUM{' '}
                   </Header>
                 </Segment>
                 <Segment.Group
@@ -84,11 +84,10 @@ export default class About extends React.Component {
                     padded={'very'}
                   >
                     <Header as="h2">
-                      A survivor-activated tool that educates and prepares the
-                      person they will disclose to before the conversation takes
-                      place. Our tool takes the burden off of the survivor for
-                      having to *educate their loved ones about assault* during
-                      disclosure because we provide that training ahead of time.
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                      Deserunt nihil assumenda ullam accusantium, expedita ut,
+                      labore corrupti officiis laudantium aut voluptatibus eum!
+                      Aut assumenda iure ex itaque at veniam quam?
                     </Header>
                   </Segment>
                   <Segment.Group
@@ -104,11 +103,10 @@ export default class About extends React.Component {
                       padded={'very'}
                     >
                       <Header as="h2">
-                        We have cultivated a unqiue framework for how to connect
-                        with those in your life by providing the coaching, space
-                        and time needed to increase your confidence to engage in
-                        these "harder" conversations. So that you can truly show
-                        up for the people you love.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Totam atque quisquam veniam expedita quod eos facere
+                        eligendi modi obcaecati unde debitis rem, veritatis iure
+                        architecto earum error doloribus deleniti iusto.
                       </Header>
                     </Segment>
                     <Segment
@@ -121,7 +119,7 @@ export default class About extends React.Component {
                         className="button wwd-button"
                         onClick={() => this.props.history.push('/form')}
                       >
-                        Use The Tool{' '}
+                        Use The LOREM{' '}
                       </button>
                     </Segment>
                   </Segment.Group>
@@ -131,52 +129,92 @@ export default class About extends React.Component {
           </div>
         )}
         <Headshot
-          url="./headShots/katherine.png"
-          name="Katherine"
-          position="Assistant Professor"
-          desc="Katherine Lorenz is a sexual assault researcher focusing on the post-assault experiences of survivors.Her work in the community involves providing social support to sexual assault and domestic violence survivors, and advocating for social change surrounding the responses to sexual assault."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/Grace_Davis.png"
-          name="Grace"
-          position="Student at Stanford"
-          desc="Grace Davis is currently a sophomore at Stanford University. She first started working in the area of sexual violence research during her gap year. Her academic interests lie in mental health, women’s history, and sexual violence prevention."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/Kathryn_Holland.png"
-          name="Kathryn"
-          position="Assistant Professor"
-          desc="Dr. Holland is interested in the wellbeing around issues of sexual violence and sexual health, including: the implementation, use, and effectiveness of formal support systems for sexual assault survivors, and interpersonal reactions to sexual assault disclosures"
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/Louisa_Kornblatt.png"
-          name="Louisa"
-          position="Clinical Social Worker"
-          desc="Louisa Kornblatt is an associate clinical social worker at an adolescent psychiatric hospital in the Bay Area and PhD student in Social Welfare at University of California, Berkeley. She is currently involved in qualitative research examining the perspectives of emergency department providers on responding to domestic violence."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/Sarah_Lime.png"
-          name="Sarah"
-          position="University of Michigan"
-          desc="Sarah Lime is the current Director of Community Outreach and Activism for PPE, a role responsible for coordinating and hosting the annual Panhellenic Speak Out. In the future I hope to continue combining my interests in International and Women's Studies and develop research on sex, gender, and sexuality."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/elena.png"
-          name="Elena"
-          position="Founder/CEO"
-          desc="Elena is driven by human connection. She is excited to announce the upcoming launch of her company, Empowered Conversation, a tool re-envisioning the future of social support by changing the way we have hard conversations."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/katherine.png"
-          name="KatherineV2"
-          position="Professor"
-          desc="Nam massa tortor, pellentesque ac arcu ac, efficitur laoreet metus. Aliquam dapibus tempus lectus mattis sollicitudin. Sed placerat aliquet dui, id tristique nunc hendrerit vel. Nunc quis libero augue. Ultrices quis lectus ac, congue porttitor ipsum. Class aptent taciti sociosqu ad litora torquent per conubia nostra."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
         <Headshot
-          url="./headShots/katherine.png"
-          name="KatherineV3"
-          position="Lead Professor"
-          desc="Donec malesuada dolor id risus convallis efficitur. Donec velit ipsum, pharetra sed sodales et, feugiat quis est. Quisque porta ante leo pretium augue, vitae interdum turpis orci vitae lacus. Aliquam fermentum tempor sem, mattis volutpat nulla commodo vitae. Cras tellus lacus, feugiat nec turpis in, consequat maximus diam."
+          url="./headShots/banana.jpg"
+          name="Banana"
+          position="Lead Banana"
+          desc="Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana
+          Banana Banana Banana banana banana banana Banana banana Banana banana"
         />
       </Container>
     );
