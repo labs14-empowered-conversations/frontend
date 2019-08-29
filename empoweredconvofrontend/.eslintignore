@@ -1,8 +1,0 @@
-src/registerServiceWorker.js
-node_modules/*
-public/*
-build/*
-config/*
-.test.*
-.eslintignore
-.prettierignore
