@@ -36,20 +36,18 @@ export default class Landing extends React.Component {
         <Parallax speed={3} centered vertical={false} horizontal={true}>
           <div className="landing-stage-left">
             <div className="landing-stage-title">
-              <h5>Today I am . . .</h5>
+              <h5>Today I am . . . LOREM</h5>
               <h1>
-                <span>EM</span>
-                <span style={{ color: '#24b4a5' }}>POWER</span>
-                <span>ED</span>
+                <span>IP</span>
+                <span style={{ color: '#24b4a5' }}>'''''</span>
+                <span>SUM</span>
               </h1>
-              <h4>When words matter most.</h4>
-              <p>
-                A survivor-activated tool that educates and prepares the person
-                they will disclose to before the conversation takes place.
-              </p>
+              <h4>PARALLAX LOREM IPSUM, AWESOME</h4>
+              <p>40 hrs x 8 team members x 8 weeks [2560 hrs total]</p>
+              <p>for this. hire us?</p>
               <div className="landing-button-box">
                 <Link to="/learn">
-                  <button className="landingBtn">Explore</button>
+                  <button className="landingBtn">????????</button>
                 </Link>
               </div>
             </div>
@@ -64,9 +62,9 @@ export default class Landing extends React.Component {
           {this.state.mobileChange ? (
             <>
               <h3 className="tablet-video-header">
-                One Conversation
+                One Lorem
                 <br />
-                at a Time
+                at an Ipsum
               </h3>
             </>
           ) : null}
@@ -76,23 +74,20 @@ export default class Landing extends React.Component {
               {!this.state.mobileChange ? (
                 <>
                   <h3>
-                    One Conversation
+                    One Lorem
                     <br />
-                    at a Time
+                    at an Ipsum
                   </h3>
                 </>
               ) : null}
               <p>
+                <span>Our IPSUM takes the Lorem</span>
+                <span style={{ fontWeight: 'bold' }}> and Ipsum </span>
                 <span>
-                  Our tool takes the burden off of the survivor for having to
-                </span>
-                <span style={{ fontWeight: 'bold' }}>
-                  {' '}
-                  educate their loved ones about assault{' '}
-                </span>
-                <span>
-                  during disclosure because we provide that training ahead of
-                  time.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem,
+                  animi reprehenderit? Aperiam ex magni numquam itaque,
+                  aspernatur quia dolorem repellat. Ducimus nostrum veritatis
+                  natus? Expedita est deserunt quisquam temporibus eum.
                 </span>
               </p>
             </div>
@@ -100,51 +95,46 @@ export default class Landing extends React.Component {
           {/* float centerpiece end */}
           {!this.state.mobileChange ? (
             <div className="landing-statement">
-              <h2>What We Do</h2>
+              <h2>What LOOOOOOOOOREMMMMMM</h2>
               <div className="bullet-point">
                 <div className="bullet">1</div>
                 <div className="bullet-point-text">
-                  <h4>Communicate</h4>
-                  <p>
-                    We've got your back when it comes to anonymously reaching
-                    out to a loved one!
-                  </p>
+                  <h4>Lorem</h4>
+                  <p>LoremIpsumLoremIpSum</p>
                 </div>
               </div>
               <div className="bullet-point">
                 <div className="bullet">2</div>
                 <div className="bullet-point-text">
-                  <h4>Educate</h4>
-                  <p>
-                    We'll educate them about assault and how to support you.
-                  </p>
+                  <h4>IPPPPPPPPPSUMMMMMMMM</h4>
+                  <p>Lorem</p>
                 </div>
               </div>
               <div className="bullet-point">
                 <div className="bullet">3</div>
                 <div className="bullet-point-text">
-                  <h4>Empower</h4>
-                  <p>Have a conversation of Empowerment instead of fear.</p>
+                  <h4>Lorem</h4>
+                  <p>Have a Lorem of Lorem instead of Ipsum.</p>
                 </div>
               </div>
             </div>
           ) : (
             <div className="landing-statement">
-              <h2>What We Do</h2>
+              <h2>Ipsum We Lorem</h2>
               <div className="landing-column">
-                <h4>Communicate</h4>
+                <h4>IPSUMIPSUMIPSUMIPSUM</h4>
                 <p>
-                  We've got your back when it comes to anonymously reaching out
-                  to a loved one!
+                  We've got your Lorem when it Lorem to Lorem Lorem out to a
+                  Lorem Lorem!
                 </p>
               </div>
               <div className="landing-column">
-                <h4>Educate</h4>
-                <p>We'll educate them about assault and how to support you.</p>
+                <h4>Lorem</h4>
+                <p>Lorem educate Lorem about Lorem and how to Lorem you.</p>
               </div>
               <div className="landing-column">
-                <h4>Empower</h4>
-                <p>Have a conversation of Empowerment instead of fear.</p>
+                <h4>Lorem</h4>
+                <p>Lorem a Lorem of Lorem Lorem of Lorem.</p>
               </div>
             </div>
           )}

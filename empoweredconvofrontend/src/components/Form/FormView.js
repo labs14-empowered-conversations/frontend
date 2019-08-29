@@ -50,8 +50,8 @@ class FormView extends React.Component {
       .initializeConvo({
         ...this.state.convoRequest,
         school:
-          (this.state.appKey === 'goblue' && 'michigan') ||
-          (this.state.appKey === 'gocats' && 'northwestern'),
+          (this.state.appKey === 'lorem' && 'ipsum') ||
+          (this.state.appKey === 'ipsum' && 'lorem'),
       })
       .then(() =>
         toast('Conversation started successfully!', {
@@ -97,7 +97,7 @@ class FormView extends React.Component {
   };
 
   submitKey = e => {
-    let keys = ['goblue', 'gocats'];
+    let keys = ['ipsum', 'lorem'];
     keys.includes(this.state.appKey)
       ? (function(env) {
           env.setState({ isVerifying: true });
@@ -172,11 +172,12 @@ class FormView extends React.Component {
                 <Grid columns={1} className="tablet mobile only">
                   <Grid.Column>
                     <div className="text-box">
-                      <h5>Your Information</h5>
+                      <h5>Lorem</h5>
                       <p>
-                        Don't worry! We'll keep you anonymous, no matter what!
-                        We just need your cell phone number to give you an
-                        update when the recipient gets the text.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Ipsa nostrum rem dignissimos est. Id quisquam
+                        nihil adipisci libero harum iste voluptatibus atque hic
+                        neque odit! Blanditiis et non voluptatem eius.
                       </p>
                     </div>
                     <Form.Group grouped>
@@ -193,10 +194,11 @@ class FormView extends React.Component {
                   </Grid.Column>
                   <Grid.Column>
                     <div className="text-box">
-                      <h5>Recipient's Information</h5>
+                      <h5>Reclefrgoruihre</h5>
                       <p>
-                        This person will receive the text that informs them that
-                        someone in their life wants to have a hard conversation.
+                        mos est. Id quisquam nihil adipisci libero harum iste
+                        voluptatibus atque hic neque odit! Blanditiis et non
+                        voluptatem e
                       </p>
                     </div>
                     <Form.Group grouped>
@@ -224,11 +226,11 @@ class FormView extends React.Component {
                 <Grid columns={2} divided className="computer only">
                   <Grid.Column>
                     <div className="text-box">
-                      <h5>Your Information</h5>
+                      <h5>Your Lorem</h5>
                       <p>
-                        Don't worry! We'll keep you anonymous, no matter what!
-                        We just need your cell phone number to give you an
-                        update when the recipient gets the text.
+                        mos est. Id quisquam nihil adipisci libero harum iste
+                        voluptatibus atque hic neque odit! Blanditiis et non
+                        voluptatem e
                       </p>
                     </div>
                     <Form.Group grouped>
@@ -245,10 +247,11 @@ class FormView extends React.Component {
                   </Grid.Column>
                   <Grid.Column>
                     <div className="text-box">
-                      <h5>Recipient's Information</h5>
+                      <h5>Recipient's Lorem</h5>
                       <p>
-                        This person will receive the text that informs them that
-                        someone in their life wants to have a hard conversation.
+                        mos est. Id quisquam nihil adipisci libero harum iste
+                        voluptatibus atque hic neque odit! Blanditiis et non
+                        voluptatem e
                       </p>
                     </div>
                     <Form.Group grouped>

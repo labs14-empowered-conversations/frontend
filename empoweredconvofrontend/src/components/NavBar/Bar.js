@@ -11,24 +11,21 @@ export default function Bar() {
       <div className="nav-bar">
         <div className="logo-div">
           <Link to="/">
-            <img
-              className="nav-logo"
-              src={''}
-              alt="Empowered Conversations clickable logo; returns to homepage."
-            />
+            <img className="nav-logo" src={''} alt="orem Ipsum<." />
           </Link>
-          <h6>Empowered Conversation</h6>
+          <h6>Lorem Ipsum</h6>
         </div>
         <nav className="nav-front">
           <Link className="link-dec" to="/about">
             About
           </Link>
           <Link className="link-dec" to="/learn">
-            Learn
+            mos
           </Link>
           {/* <Link to='/form' className="nav-button">Use The Tool</Link> */}
           <Link to="/form">
-            <img className="btnCta" src={ctaBtn} alt="use tool" />
+            {/* <img className="btnCta" src={ctaBtn} alt="use tool" /> */}
+            <h1 className="btnCta">lambda ipsum?</h1>
           </Link>
         </nav>
         <div className="mobile-nav">
